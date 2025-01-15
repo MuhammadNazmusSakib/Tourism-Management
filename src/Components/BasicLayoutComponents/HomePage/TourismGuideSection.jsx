@@ -57,12 +57,13 @@ const TourismGuideSection = () => {
         <Tabs>
           {/* Tab Headers */}
           <TabList className="flex justify-center mb-6 space-x-6">
+            <div className='flex flex-col w-full sm:justify-center sm:flex-row'>
             <Tab className="px-4 py-2 cursor-pointer border-b-2 border-transparent focus:outline-none hover:border-blue-500">
               Our Packages
             </Tab>
             <Tab className="px-4 py-2 cursor-pointer border-b-2 border-transparent focus:outline-none hover:border-blue-500">
               Meet Our Tour Guides
-            </Tab>
+            </Tab></div>
           </TabList>
 
           {/* Tab Content */}

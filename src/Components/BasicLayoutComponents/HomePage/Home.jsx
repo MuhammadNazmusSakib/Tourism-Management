@@ -3,6 +3,7 @@ import Banner from './Banner'
 import WhyChoose from './WhyChoose'
 import Overview from './Overview'
 import TourismGuideSection from './TourismGuideSection'
+import TouristStorySection from './TouristStorySection'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Banner/>
       <Overview/>
       <TourismGuideSection/>
+      <TouristStorySection/>
       <WhyChoose/>
     </div>
   )

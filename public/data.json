@@ -1,0 +1,1169 @@
+[
+    {
+        "title": "Sundarbans Mangrove Forest",
+        "price": 4000,
+        "duration": "4 Days 3 Nights",
+        "age": "12+ Age",
+        "category": "Nature & Wildlife",
+        "description": "Explore the largest mangrove forest in the world and the home of the Royal Bengal Tiger.",
+        "details": "The Sundarbans is a UNESCO World Heritage Site, offering an incredible journey through dense mangroves, rivers, and diverse wildlife.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 30
+        },
+        "departureLocation": "Khulna, Bangladesh",
+        "departureTime": "7:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Comfortable outdoor wear and trekking shoes",
+        "included": [
+            "Boat Cruise",
+            "Guide",
+            "Meals",
+            "Wildlife Permits"
+        ],
+        "notIncluded": [
+            "Transport to Departure Point",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Cruise",
+                "description": "Set off on a river cruise through the Sundarbans.",
+                "points": [
+                    "Spot diverse bird species.",
+                    "Visit Dhangmari Forest Station.",
+                    "Enjoy local cuisine on the boat."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Wildlife Safari",
+                "description": "Morning safari for wildlife exploration.",
+                "points": [
+                    "Look for Royal Bengal Tigers.",
+                    "Explore crocodile breeding centers.",
+                    "Visit Karamjol Wildlife Center."
+                ]
+            },
+            {
+                "day": 3,
+                "title": "Village Tour and Relaxation",
+                "description": "Visit nearby villages and interact with locals.",
+                "points": [
+                    "Learn about local life and culture.",
+                    "Relax on the boat deck.",
+                    "Sunset photography."
+                ]
+            },
+            {
+                "day": 4,
+                "title": "Return",
+                "description": "Final exploration and return to Khulna.",
+                "points": [
+                    "Enjoy a final cruise through the forest.",
+                    "Depart from Sundarbans."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Sundarbans_%28World_Heritage_Site%29.jpg",
+                "alt": "Sundarbans Forest View"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Royal_Bengal_Tiger.jpg",
+                "alt": "Royal Bengal Tiger"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sundarban_boats.jpg",
+                "alt": "Boats in Sundarbans"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Sundarbans",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Sundarbans",
+                "history": [
+                    {
+                        "year": "1987",
+                        "description": "Declared a UNESCO World Heritage Site."
+                    },
+                    {
+                        "year": "2007",
+                        "description": "Included as a Ramsar Wetland of International Importance."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Cox's Bazar Beach",
+        "price": 2500,
+        "duration": "3 Days 2 Nights",
+        "age": "All Ages",
+        "category": "Beaches",
+        "description": "Relax on the world's longest natural sea beach.",
+        "details": "Cox's Bazar offers pristine beaches, turquoise waters, and vibrant sunsets.",
+        "rating": {
+            "stars": 4.7,
+            "reviews": 50
+        },
+        "departureLocation": "Cox's Bazar, Bangladesh",
+        "departureTime": "8:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Casual beachwear",
+        "included": [
+            "Accommodation",
+            "Breakfast",
+            "Beach Activities",
+            "Guide"
+        ],
+        "notIncluded": [
+            "Flights",
+            "Lunch and Dinner"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Beach Walk and Sunset",
+                "description": "Arrive and explore the beautiful sandy beach.",
+                "points": [
+                    "Stroll along the beach.",
+                    "Watch the sunset.",
+                    "Visit local seafood restaurants."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Marine Drive and Activities",
+                "description": "Enjoy thrilling beach activities.",
+                "points": [
+                    "Experience parasailing.",
+                    "Take a Marine Drive tour.",
+                    "Visit Himchari Waterfall."
+                ]
+            },
+            {
+                "day": 3,
+                "title": "Shopping and Return",
+                "description": "Shop for local souvenirs before departure.",
+                "points": [
+                    "Explore Burmese Market.",
+                    "Relax on the beach.",
+                    "Return to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Cox%27s_Bazar_beach.jpg",
+                "alt": "Cox's Bazar Beach"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/13/Himchari_Waterfall.jpg",
+                "alt": "Himchari Waterfall"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sunset_Cox%27s_Bazar.jpg",
+                "alt": "Sunset at Cox's Bazar"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Cox's Bazar",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Cox's+Bazar",
+                "history": [
+                    {
+                        "year": "1971",
+                        "description": "Cox's Bazar played a crucial role during the Liberation War."
+                    },
+                    {
+                        "year": "2010",
+                        "description": "Declared as a tourist capital of Bangladesh."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Saint Martin's Island",
+        "price": 3000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Island",
+        "description": "Discover the only coral island in Bangladesh, known for its turquoise waters and white sandy beaches.",
+        "details": "Saint Martin's Island is a serene destination perfect for snorkeling, seafood, and stunning sunsets.",
+        "rating": {
+            "stars": 4.6,
+            "reviews": 40
+        },
+        "departureLocation": "Teknaf, Bangladesh",
+        "departureTime": "9:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Beachwear and casual attire",
+        "included": [
+            "Boat Transfer",
+            "Accommodation",
+            "Meals",
+            "Snorkeling Gear"
+        ],
+        "notIncluded": [
+            "Personal Expenses",
+            "Drinks"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Exploration",
+                "description": "Boat transfer to the island and leisure time.",
+                "points": [
+                    "Check into beachside accommodation.",
+                    "Explore the coral reefs.",
+                    "Enjoy fresh seafood."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Snorkeling and Return",
+                "description": "Morning snorkeling and departure.",
+                "points": [
+                    "Discover marine life.",
+                    "Relax on the beach.",
+                    "Boat transfer back to Teknaf."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/19/Saint_Martin_Island.jpg",
+                "alt": "Saint Martin's Island Beach"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Sunset_Saint_Martin.jpg",
+                "alt": "Sunset at Saint Martin's Island"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Coral_Saint_Martin.jpg",
+                "alt": "Coral Reefs"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Saint Martin's Island",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Saint+Martin's+Island",
+                "history": [
+                    {
+                        "year": "1900s",
+                        "description": "Developed as a fishing and tourism hub."
+                    },
+                    {
+                        "year": "2000s",
+                        "description": "Became a popular eco-tourism destination."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Bandarban Hill Tracts",
+        "price": 3500,
+        "duration": "3 Days 2 Nights",
+        "age": "12+ Age",
+        "category": "Hill Tracts",
+        "description": "Experience the breathtaking beauty of the Chittagong Hill Tracts, home to diverse cultures and stunning landscapes.",
+        "details": "Bandarban offers lush green hills, waterfalls, tribal cultures, and adventurous trekking routes.",
+        "rating": {
+            "stars": 4.9,
+            "reviews": 65
+        },
+        "departureLocation": "Bandarban, Bangladesh",
+        "departureTime": "7:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Comfortable trekking attire and sturdy footwear",
+        "included": [
+            "Accommodation",
+            "Guide",
+            "Meals",
+            "Trekking Gear"
+        ],
+        "notIncluded": [
+            "Transport to Departure Point",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Sightseeing",
+                "description": "Arrive in Bandarban and explore key attractions.",
+                "points": [
+                    "Visit Nilgiri Hills.",
+                    "Explore Meghla Tourist Complex.",
+                    "Enjoy a traditional dinner."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Trekking and Adventure",
+                "description": "Trek through the scenic hills and visit waterfalls.",
+                "points": [
+                    "Hike to Boga Lake.",
+                    "Explore Nafakhum Waterfall.",
+                    "Experience local tribal culture."
+                ]
+            },
+            {
+                "day": 3,
+                "title": "Relaxation and Departure",
+                "description": "Enjoy the serene beauty before departure.",
+                "points": [
+                    "Relax at Sangu River.",
+                    "Take photos of the scenic vistas.",
+                    "Return to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bandarban_Nilgiri.jpg",
+                "alt": "Nilgiri Hills in Bandarban"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Nafakhum_Waterfall.jpg",
+                "alt": "Nafakhum Waterfall"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Sangu_River.jpg",
+                "alt": "Sangu River"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Bandarban",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Bandarban",
+                "history": [
+                    {
+                        "year": "1900s",
+                        "description": "Known for its tribal heritage and natural beauty."
+                    },
+                    {
+                        "year": "2000s",
+                        "description": "Developed as a major eco-tourism destination."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Rangamati Lake",
+        "price": 3000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Lakes",
+        "description": "Explore the scenic beauty of Kaptai Lake in Rangamati, the largest man-made lake in Bangladesh.",
+        "details": "Rangamati Lake offers serene boat rides, lush greenery, and a glimpse into indigenous lifestyles.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 40
+        },
+        "departureLocation": "Rangamati, Bangladesh",
+        "departureTime": "8:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Comfortable casual wear",
+        "included": [
+            "Boat Ride",
+            "Accommodation",
+            "Meals",
+            "Guide"
+        ],
+        "notIncluded": [
+            "Personal Expenses",
+            "Transport to Departure Point"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Boat Ride",
+                "description": "Arrive at Rangamati and enjoy a boat ride on Kaptai Lake.",
+                "points": [
+                    "Visit Hanging Bridge.",
+                    "Explore Shuvolong Waterfall.",
+                    "Enjoy a lakeside dinner."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Indigenous Village Tour",
+                "description": "Visit indigenous villages and learn about their culture.",
+                "points": [
+                    "Meet Chakma and Marma communities.",
+                    "Shop for traditional crafts.",
+                    "Return to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kaptai_Lake_Rangamati.jpg",
+                "alt": "Kaptai Lake in Rangamati"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Hanging_Bridge_Rangamati.jpg",
+                "alt": "Hanging Bridge in Rangamati"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Shuvolong_Waterfall.jpg",
+                "alt": "Shuvolong Waterfall"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Rangamati",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Rangamati",
+                "history": [
+                    {
+                        "year": "1960s",
+                        "description": "Created as a result of the Kaptai Dam construction."
+                    },
+                    {
+                        "year": "2000s",
+                        "description": "Developed as a popular tourist destination."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Sylhet Tea Gardens",
+        "price": 2000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Nature",
+        "description": "Experience the serene beauty of lush green tea estates.",
+        "details": "Explore the rolling hills of Sylhet adorned with vibrant tea gardens and witness the tea-making process.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 60
+        },
+        "departureLocation": "Sylhet, Bangladesh",
+        "departureTime": "9:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Comfortable casual wear",
+        "included": [
+            "Accommodation",
+            "Breakfast",
+            "Guide",
+            "Tea Garden Entry"
+        ],
+        "notIncluded": [
+            "Lunch and Dinner",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Tea Garden Exploration",
+                "description": "Immerse yourself in the tranquility of tea gardens.",
+                "points": [
+                    "Visit the famous tea estates.",
+                    "Learn about tea cultivation and processing.",
+                    "Enjoy a relaxing evening in nature."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Local Culture and Return",
+                "description": "Experience Sylhet's rich culture before departure.",
+                "points": [
+                    "Visit local markets.",
+                    "Taste traditional Sylheti dishes.",
+                    "Return journey to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sylhet_Tea_Garden.jpg",
+                "alt": "Sylhet Tea Gardens"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Sylhet_Tea_Estate.jpg",
+                "alt": "Tea Estate in Sylhet"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Tea_Plantation_Sylhet.jpg",
+                "alt": "Tea Plantation"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Sylhet",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Sylhet+Tea+Gardens",
+                "history": [
+                    {
+                        "year": "1874",
+                        "description": "Tea cultivation began in Sylhet during the British era."
+                    },
+                    {
+                        "year": "2000",
+                        "description": "Sylhet became one of Bangladesh's top tea-producing regions."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Ratargul Swamp Forest",
+        "price": 3000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Adventure",
+        "description": "Discover the enchanting freshwater swamp forest of Bangladesh.",
+        "details": "Glide through the serene waters of Ratargul, surrounded by lush greenery and wildlife.",
+        "rating": {
+            "stars": 4.9,
+            "reviews": 80
+        },
+        "departureLocation": "Sylhet, Bangladesh",
+        "departureTime": "8:30 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Comfortable outdoor wear",
+        "included": [
+            "Boat Ride",
+            "Accommodation",
+            "Guide",
+            "Breakfast"
+        ],
+        "notIncluded": [
+            "Lunch and Dinner",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Swamp Forest Adventure",
+                "description": "Explore the natural beauty of Ratargul.",
+                "points": [
+                    "Take a boat ride through the forest.",
+                    "Spot diverse flora and fauna.",
+                    "Enjoy a peaceful evening by the swamp."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Local Sightseeing and Return",
+                "description": "Visit nearby attractions before heading back.",
+                "points": [
+                    "Discover local villages and culture.",
+                    "Relax by the forest edge.",
+                    "Return journey to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Ratargul_Swamp_Forest.jpg",
+                "alt": "Ratargul Swamp Forest"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ratargul_Boat_Ride.jpg",
+                "alt": "Boat Ride in Ratargul"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Ratargul_Trees.jpg",
+                "alt": "Trees in Ratargul Swamp Forest"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Ratargul",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Ratargul+Swamp+Forest",
+                "history": [
+                    {
+                        "year": "1983",
+                        "description": "Ratargul Swamp Forest was declared a reserved forest."
+                    },
+                    {
+                        "year": "2015",
+                        "description": "Became a popular eco-tourism destination in Bangladesh."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Jaflong",
+        "price": 2200,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Nature",
+        "description": "Discover the stunning natural beauty of Jaflong, nestled in the foothills of the Khasi mountains.",
+        "details": "Jaflong is known for its rolling hills, clear rivers, and lush greenery. It's a serene getaway for nature lovers.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 45
+        },
+        "departureLocation": "Sylhet, Bangladesh",
+        "departureTime": "7:30 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Casual and comfortable clothing",
+        "included": [
+            "Accommodation",
+            "Breakfast",
+            "Guide",
+            "River Cruise"
+        ],
+        "notIncluded": [
+            "Lunch and Dinner",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Sightseeing",
+                "description": "Explore the natural wonders of Jaflong.",
+                "points": [
+                    "Visit the iconic stone collection area.",
+                    "Enjoy a boat ride on the crystal-clear river.",
+                    "Relax in the peaceful ambiance of the hills."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Local Culture and Return",
+                "description": "Immerse yourself in the local culture before heading back.",
+                "points": [
+                    "Visit local Khasi tribal villages.",
+                    "Explore nearby markets for souvenirs.",
+                    "Return to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Jaflong.jpg",
+                "alt": "Jaflong River"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Jaflong_Stones.jpg",
+                "alt": "Stone collection at Jaflong"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/99/Jaflong_Hills.jpg",
+                "alt": "Hills in Jaflong"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Jaflong",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Jaflong",
+                "history": [
+                    {
+                        "year": "1960",
+                        "description": "Jaflong became known for its natural beauty and stone collection industry."
+                    },
+                    {
+                        "year": "2005",
+                        "description": "Recognized as a prominent eco-tourism destination in Bangladesh."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Paharpur Buddhist Vihara",
+        "price": 3000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Heritage",
+        "description": "Explore the ancient ruins of the Paharpur Buddhist Vihara, a UNESCO World Heritage Site.",
+        "details": "Paharpur, one of the most important archaeological sites in South Asia, offers insights into ancient Buddhist culture and architecture.",
+        "rating": {
+            "stars": 4.9,
+            "reviews": 70
+        },
+        "departureLocation": "Naogaon, Bangladesh",
+        "departureTime": "8:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Comfortable walking shoes and modest attire",
+        "included": [
+            "Accommodation",
+            "Breakfast",
+            "Guide",
+            "Entry Tickets"
+        ],
+        "notIncluded": [
+            "Lunch and Dinner",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Historical Exploration",
+                "description": "Visit the ruins of the ancient monastery.",
+                "points": [
+                    "Explore the main stupa and surrounding structures.",
+                    "Learn about the history of the Pala Empire.",
+                    "Take a guided tour of the museum on-site."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Cultural Insights and Return",
+                "description": "Engage with local culture and return home.",
+                "points": [
+                    "Visit nearby archaeological sites.",
+                    "Experience the local lifestyle and markets.",
+                    "Return journey to your destination."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Paharpur_Buddhist_Vihara.jpg",
+                "alt": "Paharpur Buddhist Vihara Ruins"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/36/Paharpur_Main_Stupa.jpg",
+                "alt": "Main Stupa at Paharpur"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Paharpur_Museum.jpg",
+                "alt": "Museum at Paharpur"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Paharpur",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Paharpur+Buddhist+Vihara",
+                "history": [
+                    {
+                        "year": "8th Century",
+                        "description": "Constructed during the reign of Dharmapala of the Pala Dynasty."
+                    },
+                    {
+                        "year": "1985",
+                        "description": "Designated as a UNESCO World Heritage Site."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Ahsan Manzil",
+        "price": 1800,
+        "duration": "1 Day",
+        "age": "All Ages",
+        "category": "Heritage",
+        "description": "Discover the majestic Ahsan Manzil, a symbol of Dhaka's royal past.",
+        "details": "Ahsan Manzil, also known as the Pink Palace, was the official residence of the Nawabs of Dhaka. It is now a museum showcasing Dhaka's historical artifacts.",
+        "rating": {
+            "stars": 4.6,
+            "reviews": 35
+        },
+        "departureLocation": "Dhaka, Bangladesh",
+        "departureTime": "9:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Modest and comfortable clothing",
+        "included": [
+            "Entry Tickets",
+            "Guide",
+            "Museum Tour"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Ahsan Manzil Tour",
+                "description": "Explore the historical palace and its surroundings.",
+                "points": [
+                    "Take a guided tour of the Pink Palace.",
+                    "Visit the museum to learn about the Nawabs of Dhaka.",
+                    "Stroll through the surrounding gardens."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/23/Ahsan_Manzil.jpg",
+                "alt": "Ahsan Manzil"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ahsan_Manzil_Museum.jpg",
+                "alt": "Inside Ahsan Manzil Museum"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/36/Ahsan_Manzil_Night.jpg",
+                "alt": "Ahsan Manzil at Night"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Ahsan Manzil",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Ahsan+Manzil",
+                "history": [
+                    {
+                        "year": "1872",
+                        "description": "Construction of Ahsan Manzil was completed under Nawab Abdul Ghani."
+                    },
+                    {
+                        "year": "1985",
+                        "description": "Converted into a museum to preserve its rich history."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Lalbagh Fort",
+        "price": 2000,
+        "duration": "1 Day",
+        "age": "All Ages",
+        "category": "Heritage",
+        "description": "Visit the historic Lalbagh Fort, an unfinished Mughal-era fortification in Dhaka.",
+        "details": "Lalbagh Fort is a 17th-century Mughal structure featuring stunning architecture and rich history. It remains one of the most popular tourist destinations in Dhaka.",
+        "rating": {
+            "stars": 4.7,
+            "reviews": 40
+        },
+        "departureLocation": "Dhaka, Bangladesh",
+        "departureTime": "10:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Modest and comfortable clothing",
+        "included": [
+            "Entry Tickets",
+            "Guide",
+            "Fort Tour"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Lalbagh Fort Tour",
+                "description": "Discover the architectural beauty and history of Lalbagh Fort.",
+                "points": [
+                    "Explore the main fort complex.",
+                    "Visit the Tomb of Pari Bibi.",
+                    "Learn about the history of the Mughal era."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Lalbagh_Fort.jpg",
+                "alt": "Lalbagh Fort"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Lalbagh_Fort_Interior.jpg",
+                "alt": "Inside Lalbagh Fort"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/83/Lalbagh_Fort_Mosque.jpg",
+                "alt": "Lalbagh Fort Mosque"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Lalbagh Fort",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Lalbagh+Fort",
+                "history": [
+                    {
+                        "year": "1678",
+                        "description": "Construction began under Mughal prince Muhammad Azam."
+                    },
+                    {
+                        "year": "1757",
+                        "description": "The fort became a key site during the battle of Plassey."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Sonargaon",
+        "price": 2200,
+        "duration": "1 Day",
+        "age": "All Ages",
+        "category": "Heritage",
+        "description": "Explore the ancient capital of Bengal, Sonargaon.",
+        "details": "Sonargaon, once the capital of Bengal, offers a glimpse into the rich history of the region with its ancient architecture, museums, and traditional crafts.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 45
+        },
+        "departureLocation": "Dhaka, Bangladesh",
+        "departureTime": "8:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Modest and comfortable clothing",
+        "included": [
+            "Entry Tickets",
+            "Guide",
+            "Museum Tour"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Sonargaon Tour",
+                "description": "Visit the historic sites of Sonargaon.",
+                "points": [
+                    "Explore the Folk Art and Crafts Museum.",
+                    "Visit the ruins of Panam City.",
+                    "Learn about traditional Bengali crafts."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/94/Panam_Nagar.jpg",
+                "alt": "Panam City, Sonargaon"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Folk_Art_and_Crafts_Museum.jpg",
+                "alt": "Folk Art and Crafts Museum"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/79/Traditional_House_in_Sonargaon.jpg",
+                "alt": "Traditional House in Sonargaon"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Sonargaon",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Sonargaon",
+                "history": [
+                    {
+                        "year": "13th Century",
+                        "description": "Sonargaon served as the capital of Bengal under the Sultanate."
+                    },
+                    {
+                        "year": "1905",
+                        "description": "Panam City became a center for commerce during the British rule."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Mahasthangarh",
+        "price": 2500,
+        "duration": "1 Day",
+        "age": "All Ages",
+        "category": "Heritage",
+        "description": "Visit the ancient archaeological site of Mahasthangarh.",
+        "details": "Mahasthangarh, the oldest archaeological site in Bangladesh, showcases the remnants of ancient Pundranagar, the capital of the Mauryan Empire in Bengal.",
+        "rating": {
+            "stars": 4.9,
+            "reviews": 60
+        },
+        "departureLocation": "Bogura, Bangladesh",
+        "departureTime": "9:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Modest and comfortable clothing",
+        "included": [
+            "Entry Tickets",
+            "Guide",
+            "Archaeological Site Tour"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Mahasthangarh Tour",
+                "description": "Discover the history of Mahasthangarh.",
+                "points": [
+                    "Explore the ancient citadel and its surroundings.",
+                    "Visit the Mahasthangarh Museum.",
+                    "Learn about the Mauryan and Gupta periods in Bengal."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Mahasthangarh.jpg",
+                "alt": "Mahasthangarh Ruins"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Mahasthangarh_Museum.jpg",
+                "alt": "Mahasthangarh Museum"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Citadel_of_Mahasthangarh.jpg",
+                "alt": "Citadel of Mahasthangarh"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Mahasthangarh",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Mahasthangarh",
+                "history": [
+                    {
+                        "year": "3rd Century BCE",
+                        "description": "Mahasthangarh was established as the capital of Pundranagar."
+                    },
+                    {
+                        "year": "11th Century",
+                        "description": "The site flourished as a key administrative center during the Sena dynasty."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Kuakata Sea Beach",
+        "price": 3000,
+        "duration": "2 Days 1 Night",
+        "age": "All Ages",
+        "category": "Beaches",
+        "description": "Witness breathtaking sunrises and sunsets at Kuakata Sea Beach.",
+        "details": "Known as the 'Daughter of the Sea', Kuakata offers stunning views of both sunrise and sunset over the Bay of Bengal, along with serene beaches and cultural attractions.",
+        "rating": {
+            "stars": 4.8,
+            "reviews": 65
+        },
+        "departureLocation": "Kuakata, Bangladesh",
+        "departureTime": "7:00 AM",
+        "returnTime": "5:00 PM",
+        "dressCode": "Casual beachwear",
+        "included": [
+            "Accommodation",
+            "Guide",
+            "Beach Activities"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Arrival and Sunset View",
+                "description": "Experience the beauty of Kuakata's sunset.",
+                "points": [
+                    "Arrive at Kuakata.",
+                    "Relax on the beach.",
+                    "Watch the sunset over the Bay of Bengal."
+                ]
+            },
+            {
+                "day": 2,
+                "title": "Sunrise and Local Exploration",
+                "description": "Explore Kuakata's local culture and natural beauty.",
+                "points": [
+                    "Enjoy the sunrise at the beach.",
+                    "Visit the Buddhist Temple and Rakhine villages.",
+                    "Relax on the beach before departure."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/38/Kuakata_Sunset.jpg",
+                "alt": "Kuakata Sunset"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Kuakata_Beach.jpg",
+                "alt": "Kuakata Beach"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/14/Rakhine_Village.jpg",
+                "alt": "Rakhine Village near Kuakata"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Kuakata",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Kuakata",
+                "history": [
+                    {
+                        "year": "18th Century",
+                        "description": "Kuakata was named by Rakhine settlers who dug wells ('kua') to collect drinking water."
+                    },
+                    {
+                        "year": "Present",
+                        "description": "Kuakata is a popular tourist destination known for its natural beauty."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Patenga Beach",
+        "price": 2000,
+        "duration": "1 Day",
+        "age": "All Ages",
+        "category": "Beaches",
+        "description": "Relax by the shores of Patenga Beach near Chattogram.",
+        "details": "Patenga Beach is a charming spot near Chattogram, offering scenic views, fresh seafood, and exciting activities like boat rides.",
+        "rating": {
+            "stars": 4.5,
+            "reviews": 40
+        },
+        "departureLocation": "Chattogram, Bangladesh",
+        "departureTime": "9:00 AM",
+        "returnTime": "6:00 PM",
+        "dressCode": "Casual beachwear",
+        "included": [
+            "Guide",
+            "Beach Activities"
+        ],
+        "notIncluded": [
+            "Meals",
+            "Personal Expenses"
+        ],
+        "tourPlan": [
+            {
+                "day": 1,
+                "title": "Day at Patenga Beach",
+                "description": "Enjoy a day at Patenga Beach.",
+                "points": [
+                    "Walk along the sandy beach.",
+                    "Try local seafood from beachside stalls.",
+                    "Take a boat ride or enjoy other water activities."
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/Patenga_Beach.jpg",
+                "alt": "Patenga Beach"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Boats_at_Patenga.jpg",
+                "alt": "Boats at Patenga Beach"
+            },
+            {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Patenga_Sunset.jpg",
+                "alt": "Sunset at Patenga Beach"
+            }
+        ],
+        "locationData": [
+            {
+                "name": "Patenga",
+                "src": "https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Patenga+Beach",
+                "history": [
+                    {
+                        "year": "20th Century",
+                        "description": "Patenga became a recreational area for locals and visitors from Chattogram."
+                    },
+                    {
+                        "year": "Present",
+                        "description": "Patenga Beach is a major attraction for its vibrant atmosphere and natural beauty."
+                    }
+                ]
+            }
+        ]
+    }
+]

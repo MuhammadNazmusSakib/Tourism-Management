@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FacebookShareButton, FacebookIcon } from "react-share";
 import { Contex } from "../../ContexApi/Contex";
 
-const TouristStorySection = () => {
+const Community = () => {
   const navigate = useNavigate();
   const {user} = useState(Contex)
 
@@ -74,23 +74,10 @@ const TouristStorySection = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-4 mt-8">
-          <button
-            onClick={() => navigate("/all-stories")}
-            className="px-6 py-3 bg-gray-700 text-white rounded hover:bg-gray-800 transition"
-          >
-            View All Stories
-          </button>
-          <button
-            onClick={() => navigate("/add-story")}
-            className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600 transition"
-          >
-            Add Your Story
-          </button>
-        </div>
+        {/*  */}
       </div>
     </section>
   );
 };
 
-export default TouristStorySection;
+export default Community;

@@ -6,9 +6,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import OurPackages from '../../BasicLayoutComponents/HomePage/OurPackages';
-import MeetTourGuides from '../../BasicLayoutComponents/HomePage/MeetTourGuides';
 import BookingForm from './BookingForm';
+import Information from './Information';
+import TourPlan from './TourPlan';
+import Gallery from './Gallery';
+import AllTourGuides from './AllTourGuides';
+import Location from './Location';
 
 const PackageDetails = () => {
 
@@ -93,35 +96,35 @@ const PackageDetails = () => {
                             <TabPanel className={`pt-10`}>
                                 {/* Our Packages Content */}
 
-                                <OurPackages />
+                                <Information />
 
                             </TabPanel>
 
                             <TabPanel>
                                 {/* Meet Our Tour Guides Content */}
 
-                                <MeetTourGuides />
+                                <TourPlan />
 
                             </TabPanel>
 
                             <TabPanel>
                                 {/* Meet Our Tour Guides Content */}
 
-                                <MeetTourGuides />
+                                <Gallery />
 
                             </TabPanel>
 
                             <TabPanel>
                                 {/* Meet Our Tour Guides Content */}
 
-                                <MeetTourGuides />
+                                <AllTourGuides />
 
                             </TabPanel>
 
                             <TabPanel>
                                 {/* Meet Our Tour Guides Content */}
 
-                                <MeetTourGuides />
+                                <Location />
 
                             </TabPanel>
                         </div>

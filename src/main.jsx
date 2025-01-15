@@ -15,6 +15,9 @@ import SignIn from './Components/SignIn&SignUp/SignIn';
 import 'react-toastify/dist/ReactToastify.css';
 import PackageDetails from './Components/Routes/PublicRoutes/PackageDetails';
 import Community from './Components/Routes/PublicRoutes/Community';
+import AllTrips from './Components/Routes/PublicRoutes/AllTrips';
+import AboutUs from './Components/Routes/PublicRoutes/AboutUs';
+import TourGuideProfile from './Components/Routes/PublicRoutes/TourGuideProfile';
 
 const router = createBrowserRouter([
   {
@@ -38,8 +41,20 @@ const router = createBrowserRouter([
         element: <Community/>
       },
       {
-        path: "/packageDetails",
+        path: "/about",
+        element: <AboutUs/>
+      },
+      {
+        path: "/all-trips",
+        element: <AllTrips/>
+      },
+      {
+        path: "/package-details",
         element: <PackageDetails/>
+      },
+      {
+        path: "/tour-guide-profile",
+        element: <TourGuideProfile/>
       }
     ]
   },

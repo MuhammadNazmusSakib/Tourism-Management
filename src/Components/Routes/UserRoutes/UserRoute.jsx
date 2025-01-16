@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { Contex } from '../ContexApi/Contex'
 import { Navigate, useLocation } from 'react-router-dom'
+import { Contex } from '../../ContexApi/Contex'
 
 const UserRoute = ({ children }) => {
     const { user, loading } = useContext(Contex)

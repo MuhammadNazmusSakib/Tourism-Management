@@ -18,6 +18,8 @@ import Community from './Components/Routes/PublicRoutes/Community';
 import AllTrips from './Components/Routes/PublicRoutes/AllTrips';
 import AboutUs from './Components/Routes/PublicRoutes/AboutUs';
 import TourGuideProfile from './Components/Routes/PublicRoutes/TourGuideProfile';
+import UserRoute from './Components/Routes/UserRoutes/UserRoute';
+import ManageProfile from './Components/Routes/UserRoutes/ManageProfile';
 
 const router = createBrowserRouter([
   {
@@ -59,10 +61,13 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/",
-    element: <DashboardLayout />,
+    path: "/dashboard/manage-profile",
+    element: <UserRoute><DashboardLayout /></UserRoute>,
     children: [
-      {}
+      {
+        path: "/dashboard/manage-profile",
+        element: <ManageProfile/>
+      }
     ]
   },
 ]);

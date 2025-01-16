@@ -2,58 +2,67 @@ import React from 'react'
 
 const AllTourGuides = () => {
 
-    const tourGuides = [
-        {
-            id: 1,
-            name: "John Doe",
-            expertise: "Adventure Tours",
-            description:
-                "Experienced guide with a passion for thrilling outdoor adventures.",
-            image: "https://via.placeholder.com/150",
-        },
-        {
-            id: 2,
-            name: "Jane Smith",
-            expertise: "Cultural Tours",
-            description:
-                "Specialist in local history, traditions, and culinary experiences.",
-            image: "https://via.placeholder.com/150",
-        },
-        {
-            id: 3,
-            name: "Michael Brown",
-            expertise: "Wildlife Tours",
-            description: "Enthusiastic wildlife expert and nature photographer.",
-            image: "https://via.placeholder.com/150",
-        },
-        {
-            id: 4,
-            name: "Emily Davis",
-            expertise: "Family Tours",
-            description: "Specialist in family-friendly itineraries and activities.",
-            image: "https://via.placeholder.com/150",
-        },
-        {
-            id: 5,
-            name: "Robert Wilson",
-            expertise: "Luxury Tours",
-            description: "Curates premium experiences for high-end travelers.",
-            image: "https://via.placeholder.com/150",
-        },
-        {
-            id: 6,
-            name: "Anna Thompson",
-            expertise: "Historical Tours",
-            description: "Passionate about history and archaeological discoveries.",
-            image: "https://via.placeholder.com/150",
-        },
-    ];
+    // const tourGuides = [
+    //     {
+    //         id: 1,
+    //         name: "John Doe",
+    //         expertise: "Adventure Tours",
+    //         description:
+    //             "Experienced guide with a passion for thrilling outdoor adventures.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Jane Smith",
+    //         expertise: "Cultural Tours",
+    //         description:
+    //             "Specialist in local history, traditions, and culinary experiences.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    //     {
+    //         id: 3,
+    //         name: "Michael Brown",
+    //         expertise: "Wildlife Tours",
+    //         description: "Enthusiastic wildlife expert and nature photographer.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    //     {
+    //         id: 4,
+    //         name: "Emily Davis",
+    //         expertise: "Family Tours",
+    //         description: "Specialist in family-friendly itineraries and activities.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    //     {
+    //         id: 5,
+    //         name: "Robert Wilson",
+    //         expertise: "Luxury Tours",
+    //         description: "Curates premium experiences for high-end travelers.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    //     {
+    //         id: 6,
+    //         name: "Anna Thompson",
+    //         expertise: "Historical Tours",
+    //         description: "Passionate about history and archaeological discoveries.",
+    //         image: "https://via.placeholder.com/150",
+    //     },
+    // ];
+    const packageDetails = null
+
+    if (!packageDetails) {
+        return (
+          <div className="text-center h-screen">
+            <p>No data available.</p>
+          </div>
+        )
+      }
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {tourGuides.map((guide) => (
+            {packageDetails.map((guide, idx) => (
                 <div
-                    key={guide.id}
+                    key={idx}
                     className="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center text-center"
                 >
                     <img

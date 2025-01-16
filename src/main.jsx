@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <AllTrips/>
       },
       {
-        path: "/package-details",
+        path: "/package-details/:id",
         element: <PackageDetails/>
       },
       {

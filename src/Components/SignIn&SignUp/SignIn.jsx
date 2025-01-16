@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify'
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5";
 import { Contex } from "../ContexApi/Contex";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 
 const SignIn = () => {
@@ -12,6 +13,7 @@ const SignIn = () => {
   const [seePassword, setSeePassword] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const axiosPublic = useAxiosPublic()
 
 
 
@@ -21,6 +23,18 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user
         setUser(user)
+        const userInfo = {
+          displayName: user.displayName,
+          photoURL: user.photoURL,
+          email: user.email,
+          role: 'Tourist'
+        }
+        axiosPublic.post('/users', userInfo)
+          .then(res => {
+            if (res.data.insertedId) {
+              console.log('google signin user added.')
+            }
+          })
 
         const redirectPath = location.state?.from || "/"
         navigate(redirectPath)
@@ -85,7 +99,7 @@ const SignIn = () => {
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-xl">
         {/* Title */}
         <h1 className="text-2xl font-bold text-center mb-6">
-          Log in to Lingo Bingo
+          Signin
         </h1>
 
         {/* Social Login Buttons */}
@@ -136,7 +150,7 @@ const SignIn = () => {
               Password
             </label>
             <input
-              type={!seePassword? "password" : "text"}
+              type={!seePassword ? "password" : "text"}
               id="password"
               name="password"
               className="bg-gray-200 w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -144,7 +158,7 @@ const SignIn = () => {
             />
             <buttton onClick={handleSeePassword} className="absolute mt-2 -ml-10 text-2xl">
               {
-                !seePassword? <IoEyeOffSharp /> : <IoEyeSharp />
+                !seePassword ? <IoEyeOffSharp /> : <IoEyeSharp />
               }
             </buttton>
           </div>

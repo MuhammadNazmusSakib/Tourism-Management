@@ -1,16 +1,35 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Contex } from "../../ContexApi/Contex";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
-const BookingForm = () => {
+const BookingForm = ({packageDetails}) => {
   const [tourDate, setTourDate] = useState(null);
   const [selectedGuide, setSelectedGuide] = useState("");
   const [showModal, setShowModal] = useState(false);
   const {user} = useContext(Contex)
 
   const navigate = useNavigate();
+
+  const [tourGuides, setTourGuides] = useState(null)
+  const axiosPublic = useAxiosPublic()
+
+
+  useEffect(()=> {
+      axiosPublic.get('users/tourist-guides')
+      .then(res => setTourGuides(res.data))
+      console.log(tourGuides)
+  }, [])
+
+  if (!tourGuides) {
+    return (
+      <div className="text-center h-screen">
+        <p>No data available.</p>
+      </div>
+    )
+  }
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -22,11 +41,11 @@ const BookingForm = () => {
 
     // Booking data to store
     const bookingData = {
-    //   packageName: packageDetails.name,
+      packageName: packageDetails.title,
       touristName: user.displayName,
       touristEmail: user.email,
       touristImage: user.photoURL,
-    //   price: packageDetails.price,
+      price: packageDetails.price,
       tourDate,
       tourGuide: selectedGuide,
       status: "pending",
@@ -44,17 +63,17 @@ const BookingForm = () => {
       <h2 className="text-2xl font-bold mb-6">Book Your Package</h2>
       <form onSubmit={handleBooking}>
         {/* Package Name */}
-        {/* <div className="mb-4">
+        <div className="mb-4">
           <label className="block text-gray-700 font-medium mb-2">
             Package Name
           </label>
           <input
             type="text"
-            value={packageDetails.name}
+            value={packageDetails.title}
             readOnly
             className="w-full px-4 py-2 border rounded-lg bg-gray-100"
           />
-        </div> */}
+        </div>
 
         {/* Tourist Name */}
         <div className="mb-4">
@@ -100,7 +119,7 @@ const BookingForm = () => {
           <label className="block text-gray-700 font-medium mb-2">Price</label>
           <input
             type="text"
-            // value={`$${packageDetails.price}`}
+            value={`$${packageDetails.price}`}
             readOnly
             className="w-full px-4 py-2 border rounded-lg bg-gray-100"
           />
@@ -117,11 +136,12 @@ const BookingForm = () => {
             dateFormat="MMMM d, yyyy"
             className="w-full px-4 py-2 border rounded-lg"
             placeholderText="Select a date"
+            required
           />
         </div>
 
-        {/* Tour Guide Name */}
-        {/* <div className="mb-4">
+        {/* Tour Guide Name ------------------------------*/}
+        <div className="mb-4">
           <label className="block text-gray-700 font-medium mb-2">
             Tour Guide Name
           </label>
@@ -132,12 +152,12 @@ const BookingForm = () => {
           >
             <option value="">Select a guide</option>
             {tourGuides.map((guide) => (
-              <option key={guide.id} value={guide.name}>
-                {guide.name}
+              <option key={guide._id} value={guide.displayName}>
+                {guide.displayName}
               </option>
             ))}
           </select>
-        </div> */}
+        </div>
 
         {/* Book Now Button */}
         <button

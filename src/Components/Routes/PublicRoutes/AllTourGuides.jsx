@@ -1,56 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useAxiosPublic from '../../Hooks/useAxiosPublic'
+import { useNavigate } from 'react-router-dom'
 
 const AllTourGuides = () => {
 
-    // const tourGuides = [
-    //     {
-    //         id: 1,
-    //         name: "John Doe",
-    //         expertise: "Adventure Tours",
-    //         description:
-    //             "Experienced guide with a passion for thrilling outdoor adventures.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Jane Smith",
-    //         expertise: "Cultural Tours",
-    //         description:
-    //             "Specialist in local history, traditions, and culinary experiences.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "Michael Brown",
-    //         expertise: "Wildlife Tours",
-    //         description: "Enthusiastic wildlife expert and nature photographer.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "Emily Davis",
-    //         expertise: "Family Tours",
-    //         description: "Specialist in family-friendly itineraries and activities.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    //     {
-    //         id: 5,
-    //         name: "Robert Wilson",
-    //         expertise: "Luxury Tours",
-    //         description: "Curates premium experiences for high-end travelers.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    //     {
-    //         id: 6,
-    //         name: "Anna Thompson",
-    //         expertise: "Historical Tours",
-    //         description: "Passionate about history and archaeological discoveries.",
-    //         image: "https://via.placeholder.com/150",
-    //     },
-    // ];
-    const packageDetails = null
+    const [touristGuide, setTouristGuide] = useState(null)
+    const axiosPublic = useAxiosPublic()
+    const navigate = useNavigate()
 
-    if (!packageDetails) {
+    useEffect(()=> {
+        axiosPublic.get('users/tourist-guides')
+        .then(res => setTouristGuide(res.data))
+        console.log(touristGuide)
+    }, [])
+    
+
+    if (!touristGuide) {
         return (
           <div className="text-center h-screen">
             <p>No data available.</p>
@@ -60,21 +25,21 @@ const AllTourGuides = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {packageDetails.map((guide, idx) => (
+            {touristGuide.map((guide) => (
                 <div
-                    key={idx}
-                    className="bg-white rounded-lg shadow-lg p-3 flex flex-col items-center text-center"
+                    key={guide._id}
+                    className="bg-white rounded-lg shadow-lg p-3 flex flex-col justify-between items-center text-center"
                 >
                     <img
-                        src={guide.image}
-                        alt={guide.name}
+                        src={guide.photoURL}
+                        alt={guide.displayName}
                         className="w-24 h-24 rounded-full mb-4"
                     />
-                    <h3 className="text-xl font-semibold mb-2">{guide.name}</h3>
-                    <p className="text-blue-500 mb-1">{guide.expertise}</p>
-                    <p className="text-gray-600">{guide.description}</p>
+                    <h3 className="text-xl font-semibold mb-2">{guide.displayName}</h3>
+                    <p className="text-blue-500 mb-1">{guide.specialization}</p>
+                    <p className="text-gray-600 text-left">{guide.bio}</p>
                     <button
-                        onClick={() => navigate(`/tour-guide/${guide.id}`)}
+                        onClick={() => navigate(`/tour-guide-profile/${guide._id}`)}
                         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
                     >
                         View Profile

@@ -26,7 +26,7 @@ const PackageDetails = () => {
         if (id) {
             axiosPublic.get(`allTourPackages/${id}`)
                 .then(res => {
-                    console.log('API Response:', res.data);
+                    // console.log('API Response:', res.data);
                     setPackageDetails(res.data);
                     setLoading(false)
                 })
@@ -98,7 +98,7 @@ const PackageDetails = () => {
                         </div>
                     </TabList>
 
-                    <div className='flex flex-col lg:flex-row items-center lg:space-x-6 mt-6'>
+                    <div className='flex flex-col lg:flex-row lg:space-x-6 mt-6'>
                         <div className='w-full lg:w-3/4'>
                             {/* Tab Content */}
                             <TabPanel className={`pt-10`}>
@@ -125,7 +125,7 @@ const PackageDetails = () => {
                             <TabPanel>
                                 {/* Meet Our Tour Guides Content */}
 
-                                <AllTourGuides packageDetails={packageDetails} />
+                                <AllTourGuides  />
 
                             </TabPanel>
 
@@ -136,8 +136,8 @@ const PackageDetails = () => {
 
                             </TabPanel>
                         </div>
-                        <div className='w-full lg:w-1/4'>
-                            <BookingForm />
+                        <div className='w-full lg:w-1/4 mt-4'>
+                            <BookingForm packageDetails={packageDetails}/>
                         </div>
                     </div>
                 </Tabs>

@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <PackageDetails/>
       },
       {
-        path: "/tour-guide-profile",
+        path: "/tour-guide-profile/:id",
         element: <TourGuideProfile/>
       }
     ]
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
 <Link to="/dashboard/my-bookings" ><SidebarLink icon={<FaBook />} label="My Bookings" /></Link>
 <Link to="/dashboard/manage-stories" ><SidebarLink icon={<FaRegNewspaper />} label="Manage Stories" /></Link>
 <Link to="/dashboard/add-stories" ><SidebarLink icon={<FaPlusCircle />} label="Add Stories" /></Link>
-<Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link> */}
+<Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="J</Link> */}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

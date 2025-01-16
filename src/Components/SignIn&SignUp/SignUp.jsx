@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { IoEyeOffSharp, IoEyeSharp } from 'react-icons/io5';
 import { Contex } from '../ContexApi/Contex';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ const SignUp = () => {
   const { setUser, createNewUser, updateUserProfile, googleSignIn, theme } = useContext(Contex)
   const [error, setError] = useState({})
   const [seePassword, setSeePassword] = useState(false)
+  const axiosPublic = useAxiosPublic()
 
   // see Password
   const handleSeePassword = () => setSeePassword((prev) => (!prev))
@@ -44,6 +46,18 @@ const SignUp = () => {
 
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
+            const userInfo = {
+              displayName: name,
+              photoURL: photo,
+              email: user.email,
+              role: 'Tourist'
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res => {
+              if (res.data.insertedId) {
+                console.log('user added.')
+              }
+            })
             const redirectPath = location.state?.from || "/"
             navigate(redirectPath)
           }).catch(() => {
@@ -69,6 +83,18 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user
         setUser(user)
+        const userInfo = {
+          displayName: user.displayName,
+          photoURL: user.photoURL,
+          email: user.email,
+          role: 'Tourist'
+        }
+        axiosPublic.post('/users', userInfo)
+        .then(res => {
+          if (res.data.insertedId) {
+            console.log('google signin user added.')
+          }
+        })
 
         const redirectPath = location.state?.from || "/"
         navigate(redirectPath)

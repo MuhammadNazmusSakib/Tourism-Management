@@ -12,7 +12,7 @@ const OurPackages = () => {
     useEffect(() => {
         axiosPublic.get(`randomTourPackages`)
             .then(res => {
-                console.log('API Response:', res.data);
+                // console.log('API Response:', res.data);
                 setPackages(res.data);
                 setLoading(false)
             })
@@ -32,7 +32,7 @@ const OurPackages = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {packages.map((pkg) => (
                 <div
-                    key={pkg.id}
+                    key={pkg._id}
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                 >
                     <img

@@ -1,30 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useAxiosPublic from '../../Hooks/useAxiosPublic'
+import { useNavigate } from 'react-router-dom'
 
 const OurPackages = () => {
 
-    const packages = [
-        {
-            id: 1,
-            image: "https://source.unsplash.com/300x200/?beach",
-            tourType: "Adventure",
-            title: "Beach Paradise",
-            price: "$299",
-        },
-        {
-            id: 2,
-            image: "https://source.unsplash.com/300x200/?mountain",
-            tourType: "Hiking",
-            title: "Mountain Adventure",
-            price: "$499",
-        },
-        {
-            id: 3,
-            image: "https://source.unsplash.com/300x200/?culture",
-            tourType: "Cultural",
-            title: "Cultural Immersion",
-            price: "$399",
-        },
-    ];
+    const axiosPublic = useAxiosPublic()
+    const [packages, setPackages] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        axiosPublic.get(`randomTourPackages`)
+            .then(res => {
+                console.log('API Response:', res.data);
+                setPackages(res.data);
+                setLoading(false)
+            })
+            .catch(err => console.error('API Error:', err));
+    }, [axiosPublic]);
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center min-h-screen bg-gray-100">
+                <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+            </div>
+        )
+    }
+
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -44,10 +46,10 @@ const OurPackages = () => {
                         </p>
                         <h3 className="text-xl font-bold mb-2">{pkg.title}</h3>
                         <p className="text-lg font-semibold text-gray-600 mb-4">
-                            {pkg.price}
+                            ${pkg.price}
                         </p>
-                        <button
-                            onClick={() => navigate(`/package/${pkg.id}`)}
+                        <button 
+                            onClick={() => navigate(`/package-details/${pkg._id}`)}
                             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
                         >
                             View Package

@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div>
       {/* Dropdown Button for Small Screens */}
       <div className="md:hidden bg-blue-700 text-white flex justify-between items-center p-4">
-        <h1 className=" text-2xl font-bold">Tourist Guide</h1>
+        <Link to="/"><h1 className=" text-2xl font-bold">Tourist Guide</h1></Link>
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="text-white focus:outline-none"
@@ -41,7 +41,7 @@ const Sidebar = () => {
 
       {/* Sidebar for Small Screens (Dropdown) */}
       {isDropdownOpen && (
-        <div className="md:hidden bg-gradient-to-t from-blue-400 to-purple-600 text-white shadow-lg">
+        <div className="md:hidden bg-gray-300 text-black shadow-lg">
 
           {/* Navigation Links */}
           <nav className="p-4 space-y-4">
@@ -56,11 +56,11 @@ const Sidebar = () => {
       )}
 
       {/* Sidebar for Larger Screens */}
-      <div className="hidden md:flex flex-col h-screen bg-gradient-to-t from-blue-400 to-purple-600 text-white shadow-lg">
+      <div className="hidden md:flex flex-col h-screen bg-gray-300 text-black">
         {/* Logo Section */}
-        <div className="flex items-center justify-center h-20 bg-blue-700 shadow-md">
+        <Link to="/" className="flex items-center justify-center h-20 bg-blue-700 shadow-md">
           <h1 className="text-2xl font-bold">Tourist Guide</h1>
-        </div>
+        </Link>
 
         {/* Navigation Links */}
         <nav className="flex-1 p-4 space-y-4">
@@ -71,10 +71,7 @@ const Sidebar = () => {
           <Link to="/dashboard/join-tour-guide"><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
         </nav>
 
-        {/* Footer */}
-        <div className="p-4 text-center text-sm bg-blue-800">
-          <p>© 2025 Tourist Guide</p>
-        </div>
+        
       </div>
     </div>
   );
@@ -83,7 +80,7 @@ const Sidebar = () => {
 // Sidebar Link Component
 const SidebarLink = ({ icon, label }) => {
   return (
-    <div className="flex items-center p-3 space-x-4 rounded-lg cursor-pointer hover:bg-green-600 transition">
+    <div className="flex items-center p-3 space-x-4 rounded-lg cursor-pointer hover:bg-blue-600 transition">
       <span className="text-xl">{icon}</span>
       <span className="font-medium">{label}</span>
     </div>

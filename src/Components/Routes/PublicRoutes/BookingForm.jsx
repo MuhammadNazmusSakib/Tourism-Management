@@ -179,7 +179,7 @@ const BookingForm = ({packageDetails}) => {
             <button
               onClick={() => {
                 setShowModal(false);
-                navigate("/my-bookings");
+                navigate("/dashboard/my-bookings");
               }}
               className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
             >

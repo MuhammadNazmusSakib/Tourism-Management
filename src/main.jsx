@@ -21,6 +21,9 @@ import TourGuideProfile from './Components/Routes/PublicRoutes/TourGuideProfile'
 import UserRoute from './Components/Routes/UserRoutes/UserRoute';
 import ManageProfile from './Components/Routes/UserRoutes/ManageProfile';
 import JoinTourGuide from './Components/Routes/UserRoutes/JoinTourGuide';
+import MyBookings from './Components/Routes/UserRoutes/MyBookings';
+import AddStory from './Components/Routes/UserRoutes/AddStory';
+import ManageStories from './Components/Routes/UserRoutes/ManageStories';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +71,18 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/manage-profile",
         element: <ManageProfile/>
+      },
+      {
+        path: "/dashboard/my-bookings",
+        element: <MyBookings/>
+      },
+      {
+        path: "/dashboard/add-stories",
+        element: <AddStory/>
+      },
+      {
+        path: "/dashboard/manage-stories",
+        element: <ManageStories/>
       },
       {
         path: "/dashboard/join-tour-guide",

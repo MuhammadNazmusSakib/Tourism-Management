@@ -31,6 +31,7 @@ import {
  
 } from '@tanstack/react-query'
 import EditStory from './Components/Routes/UserRoutes/EditStory';
+import AssignedTours from './Components/Routes/TourGuideRoutes/AssignedTours';
 
 const queryClient = new QueryClient()
 
@@ -100,6 +101,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/join-tour-guide",
         element: <JoinTourGuide />
+      },
+      // Tour Guide Route
+      {
+        path: "/dashboard/my-assigned-tours",
+        element: <AssignedTours/>
       }
     ]
   },

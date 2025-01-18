@@ -4,24 +4,31 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Contex } from "../../ContexApi/Contex";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
-const BookingForm = ({packageDetails}) => {
+const BookingForm = ({ packageDetails }) => {
   const [tourDate, setTourDate] = useState(null);
   const [selectedGuide, setSelectedGuide] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const {user} = useContext(Contex)
+  const { user } = useContext(Contex)
 
   const navigate = useNavigate();
 
   const [tourGuides, setTourGuides] = useState(null)
   const axiosPublic = useAxiosPublic()
+  const axiosSecure = useAxiosSecure()
 
 
-  useEffect(()=> {
-      axiosPublic.get('users/tourist-guides')
-      .then(res => setTourGuides(res.data))
-      console.log(tourGuides)
+
+  useEffect(() => {
+    axiosPublic.get('users/tourist-guides')
+      .then(res => {
+        setTourGuides(res.data)
+        console.log(tourGuides)
+      })
   }, [])
+
 
   if (!tourGuides) {
     return (
@@ -47,15 +54,22 @@ const BookingForm = ({packageDetails}) => {
       touristImage: user.photoURL,
       price: packageDetails.price,
       tourDate,
-      tourGuide: selectedGuide,
+      tourGuideName: selectedGuide.displayName, 
+      tourGuideEmail: selectedGuide.email,
       status: "pending",
     };
 
     // Simulate storing booking data (you can replace this with an API call)
     console.log("Booking Information:", bookingData);
 
-    // Show confirmation modal
-    setShowModal(true);
+    axiosSecure.post(`add-booking`, bookingData)
+      .then(res => {
+        if (res.data.insertedId) {
+          console.log(res.data)
+          // Show confirmation modal
+          setShowModal(true);
+        }
+      })
   };
 
   return (
@@ -145,18 +159,24 @@ const BookingForm = ({packageDetails}) => {
           <label className="block text-gray-700 font-medium mb-2">
             Tour Guide Name
           </label>
+          
           <select
-            value={selectedGuide}
-            onChange={(e) => setSelectedGuide(e.target.value)}
+            value={selectedGuide?.email || ""}
+            onChange={(e) => {
+              const guide = tourGuides.find((guide) => guide.email === e.target.value);
+              setSelectedGuide(guide); // Store the full guide object
+            }}
             className="w-full px-4 py-2 border rounded-lg"
+            required
           >
             <option value="">Select a guide</option>
             {tourGuides.map((guide) => (
-              <option key={guide._id} value={guide.displayName}>
+              <option key={guide._id} value={guide.email}>
                 {guide.displayName}
               </option>
             ))}
           </select>
+
         </div>
 
         {/* Book Now Button */}

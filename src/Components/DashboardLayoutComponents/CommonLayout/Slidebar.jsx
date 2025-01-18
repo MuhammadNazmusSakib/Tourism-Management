@@ -50,6 +50,10 @@ const Sidebar = () => {
             <Link to="/dashboard/manage-stories" ><SidebarLink icon={<FaRegNewspaper />} label="Manage Stories" /></Link>
             <Link to="/dashboard/add-stories" ><SidebarLink icon={<FaPlusCircle />} label="Add Stories" /></Link>
             <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+
+            {/* tour Guide Route */}
+            <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+
           </nav>
          
         </div>
@@ -69,6 +73,9 @@ const Sidebar = () => {
           <Link to="/dashboard/manage-stories"><SidebarLink icon={<FaRegNewspaper />} label="Manage Stories" /></Link>
           <Link to="/dashboard/add-stories"><SidebarLink icon={<FaPlusCircle />} label="Add Stories" /></Link>
           <Link to="/dashboard/join-tour-guide"><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+
+          {/* tour Guide Route */}
+          <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
         </nav>
 
         

@@ -50,14 +50,19 @@ const SignUp = () => {
               displayName: name,
               photoURL: photo,
               email: user.email,
-              role: 'Tourist'
+              role: 'Tourist',
+              bio: '',
+              phone: '',
+              language: '',
+              specialization: '',
+              experience: ''
             }
             axiosPublic.post('/users', userInfo)
-            .then(res => {
-              if (res.data.insertedId) {
-                console.log('user added.')
-              }
-            })
+              .then(res => {
+                if (res.data.insertedId) {
+                  console.log('user added.')
+                }
+              })
             const redirectPath = location.state?.from || "/"
             navigate(redirectPath)
           }).catch(() => {
@@ -87,14 +92,19 @@ const SignUp = () => {
           displayName: user.displayName,
           photoURL: user.photoURL,
           email: user.email,
-          role: 'Tourist'
+          role: 'Tourist',
+          bio: '',
+          phone: '',
+          language: '',
+          specialization: '',
+          experience: ''
         }
         axiosPublic.post('/users', userInfo)
-        .then(res => {
-          if (res.data.insertedId) {
-            console.log('google signin user added.')
-          }
-        })
+          .then(res => {
+            if (res.data.insertedId) {
+              console.log('google signin user added.')
+            }
+          })
 
         const redirectPath = location.state?.from || "/"
         navigate(redirectPath)

@@ -27,7 +27,12 @@ const SignIn = () => {
           displayName: user.displayName,
           photoURL: user.photoURL,
           email: user.email,
-          role: 'Tourist'
+          role: 'Tourist',
+          bio: '',
+          phone: '',
+          language: '',
+          specialization: '',
+          experience: ''
         }
         axiosPublic.post('/users', userInfo)
           .then(res => {

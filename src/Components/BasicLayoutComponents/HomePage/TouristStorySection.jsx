@@ -1,42 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FacebookShareButton, FacebookIcon } from "react-share";
 import { Contex } from "../../ContexApi/Contex";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const TouristStorySection = () => {
   const navigate = useNavigate();
   const {user} = useState(Contex)
 
-  const stories = [
-    {
-      id: 1,
-      title: "A Trip to the Mountains",
-      description: "I had an amazing time exploring the majestic peaks and lush valleys.",
-      image: "https://source.unsplash.com/300x200/?mountain",
-      url: "https://yourwebsite.com/stories/1",
-    },
-    {
-      id: 2,
-      title: "Beachside Bliss",
-      description: "Sun, sand, and sea – the perfect ingredients for relaxation.",
-      image: "https://source.unsplash.com/300x200/?beach",
-      url: "https://yourwebsite.com/stories/2",
-    },
-    {
-      id: 3,
-      title: "Cultural Immersion",
-      description: "An unforgettable experience of vibrant traditions and flavors.",
-      image: "https://source.unsplash.com/300x200/?culture",
-      url: "https://yourwebsite.com/stories/3",
-    },
-    {
-      id: 4,
-      title: "Adventures in the Forest",
-      description: "Exploring the wilderness and its natural beauty was breathtaking.",
-      image: "https://source.unsplash.com/300x200/?forest",
-      url: "https://yourwebsite.com/stories/4",
-    },
-  ];
+
+  const [stories, setStories] = useState(null)
+  const axiosPublic = useAxiosPublic()
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+      axiosPublic.get('random-stories')
+      .then(res => setStories(res.data))
+      .then(setLoading(false))
+  }, [])
+
+  if (loading || !stories) {
+      return (
+          <div className="flex items-center justify-center h-screen bg-gray-100">
+              <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+          </div>
+      )
+  }
 
   const handleShare = (url) => {
     if (!user) {
@@ -52,15 +41,15 @@ const TouristStorySection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stories.map((story) => (
-            <div key={story.id} className="bg-white flex flex-col justify-between rounded-lg shadow-lg overflow-hidden">
+            <div key={story._id} className="bg-white flex flex-col justify-between rounded-lg shadow-lg overflow-hidden">
               <img
-                src={story.image}
+                src={story.images[0]}
                 alt={story.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-6">
+              <div className="p-6 ">
                 <h3 className="text-xl font-bold mb-2">{story.title}</h3>
-                <p className="text-gray-600 mb-4">{story.description}</p>
+                <p className="text-gray-600 mb-4">{story.text}</p>
                 <FacebookShareButton
                   url={story.url}
                   quote={story.title}

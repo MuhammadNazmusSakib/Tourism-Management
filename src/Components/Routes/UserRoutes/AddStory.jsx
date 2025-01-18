@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import { Contex } from "../../ContexApi/Contex";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { Contex } from "../../ContexApi/Contex";
 import Swal from "sweetalert2";
-
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -14,70 +13,75 @@ const AddStory = () => {
   const [text, setText] = useState("");
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
-
-  const { user } = useContext(Contex)
+  const { user } = useContext(Contex);
 
   const handleImageChange = (e) => {
-    setImages([...images, ...Array.from(e.target.files)]);
+    const newFiles = Array.from(e.target.files);
+    const uniqueFiles = newFiles.filter(
+      (file) => !images.some((img) => img.name === file.name)
+    );
+    setImages([...images, ...uniqueFiles]);
+  };
+
+  const uploadImage = async (image) => {
+    const formData = new FormData();
+    formData.append("image", image);
+
+    const response = await axiosPublic.post(image_hosting_api, formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+
+    return response.data?.data?.url || null;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!title || !text || images.length === 0) {
-      alert("Please fill all fields and upload at least one image.");
+      setError("All fields are required, and you must upload at least one image.");
       return;
     }
 
+    setError("");
     setIsLoading(true);
 
     try {
-      // Upload each image to imgbb and collect URLs
-      const uploadedImageUrls = [];
-      for (const image of images) {
-        const formData = new FormData();
-        formData.append("image", image);
+      // Upload each image and collect URLs
+      const uploadedImageUrls = await Promise.all(
+        images.map((image) => uploadImage(image))
+      );
 
-        const response = await axiosPublic.post(image_hosting_api, formData, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
+      if (uploadedImageUrls.length) {
+        const newStory = {
+          email: user.email,
+          title,
+          text,
+          images: uploadedImageUrls,
+        };
 
-        if (response.data && response.data.data.url) {
-          uploadedImageUrls.push(response.data.data.url);
+        const newAddedStory = await axiosSecure.post("/add-story", newStory);
 
-          // Prepare the story object
-          const newStory = {
-            email: user.email,
-            title,
-            text,
-            images: uploadedImageUrls,
-          };
-          const newAddedStory = await axiosSecure.post('/add-story', newStory);
-          console.log(newAddedStory.data)
-          if (newAddedStory.data.insertedId) {
-            // show success popup
-            
-            Swal.fire({
-              title: "Success!",
-              text: "New Story Added!",
-              icon: "success"
-            });
-          }
-
-          // Log or send the story object to your backend
-          // console.log("New Story:", newStory);
+        if (newAddedStory.data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "New Story Added!",
+            icon: "success",
+          }).then(() => {
+            navigate("/dashboard/manage-stories");
+          });
         }
       }
-
-
-      // Redirect to Manage Stories
-      //navigate("/dashboard/manage-stories");
     } catch (error) {
       console.error("Error uploading images or saving story:", error);
-      alert("Failed to save the story. Please try again.");
+      Swal.fire({
+        title: "Error!",
+        text: "Failed to save the story. Please try again.",
+        icon: "error",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -131,16 +135,56 @@ const AddStory = () => {
             />
           </div>
 
+          {/* Image Previews */}
+          {images.length > 0 && (
+            <div className="mt-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Image Previews
+              </label>
+              <div className="grid grid-cols-3 gap-4">
+                {images.map((image, index) => (
+                  <div key={index} className="relative">
+                    <img
+                      src={URL.createObjectURL(image)}
+                      alt={`preview-${index}`}
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setImages(images.filter((_, i) => i !== index))
+                      }
+                      className="absolute top-0 right-0 bg-red-600 text-white p-1 rounded"
+                    >
+                      X
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Error Message */}
+          {error && <p className="text-red-600 text-sm">{error}</p>}
+
           {/* Submit Button */}
           <button
             type="submit"
-            className={`w-full py-2 px-4 rounded-lg ${isLoading
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700 text-white"
-              }`}
+            className={`w-full py-2 px-4 rounded-lg ${
+              isLoading
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 text-white"
+            }`}
             disabled={isLoading}
           >
-            {isLoading ? "Submitting..." : "Submit Story"}
+            {isLoading ? (
+              <div className="flex justify-center items-center">
+                <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-blue-600"></div>
+                <span className="ml-2">Submitting...</span>
+              </div>
+            ) : (
+              "Submit Story"
+            )}
           </button>
         </form>
       </div>

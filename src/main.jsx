@@ -25,6 +25,15 @@ import MyBookings from './Components/Routes/UserRoutes/MyBookings';
 import AddStory from './Components/Routes/UserRoutes/AddStory';
 import ManageStories from './Components/Routes/UserRoutes/ManageStories';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+ 
+} from '@tanstack/react-query'
+import EditStory from './Components/Routes/UserRoutes/EditStory';
+
+const queryClient = new QueryClient()
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,31 +45,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/signup",
-        element: <SignUp/>
+        element: <SignUp />
       },
       {
         path: "/login",
-        element: <SignIn/>
+        element: <SignIn />
       },
       {
         path: "/all-stories",
-        element: <Community/>
+        element: <Community />
       },
       {
         path: "/about",
-        element: <AboutUs/>
+        element: <AboutUs />
       },
       {
         path: "/all-trips",
-        element: <AllTrips/>
+        element: <AllTrips />
       },
       {
         path: "/package-details/:id",
-        element: <PackageDetails/>
+        element: <PackageDetails />
       },
       {
         path: "/tour-guide-profile/:id",
-        element: <TourGuideProfile/>
+        element: <TourGuideProfile />
       }
     ]
   },
@@ -70,23 +79,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard/manage-profile",
-        element: <ManageProfile/>
+        element: <ManageProfile />
       },
       {
         path: "/dashboard/my-bookings",
-        element: <MyBookings/>
+        element: <MyBookings />
       },
       {
         path: "/dashboard/add-stories",
-        element: <AddStory/>
+        element: <AddStory />
       },
       {
         path: "/dashboard/manage-stories",
-        element: <ManageStories/>
+        element: <ManageStories />
+      },
+      {
+        path: "/dashboard/edit-story/:id",
+        element: <EditStory/>
       },
       {
         path: "/dashboard/join-tour-guide",
-        element: <JoinTourGuide/>
+        element: <JoinTourGuide />
       }
     ]
   },
@@ -101,8 +114,10 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <DataProvider>
-    <ToastContainer />
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <ToastContainer />
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </DataProvider>
   </StrictMode>,
 )

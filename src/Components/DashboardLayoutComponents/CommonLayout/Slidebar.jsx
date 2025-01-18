@@ -5,9 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 const Sidebar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation()
-  
 
-  
+
+
 
   return (
     <div>
@@ -54,8 +54,12 @@ const Sidebar = () => {
             {/* tour Guide Route */}
             <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
 
+            {/* Admin Route */}
+            <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
+            <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
+
           </nav>
-         
+          
         </div>
       )}
 
@@ -76,9 +80,13 @@ const Sidebar = () => {
 
           {/* tour Guide Route */}
           <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+
+          {/* Admin Route */}
+          <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
+          <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
         </nav>
 
-        
+
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const AssignedTours = () => {
 
   useEffect(() => {
     if (user?.email) {
-        axiosSecure.get(`all-booking/guide/${user.email}`)
+      axiosSecure.get(`all-booking/guide/${user.email}`)
         .then((res) => {
           setAssignedTours(res.data);
           setIsLoading(false);
@@ -98,7 +98,7 @@ const AssignedTours = () => {
               <td className="border border-gray-300 px-4 py-2">${tour.price}</td>
               <td className="border border-gray-300 px-4 py-2">{tour.status}</td>
               <td className="flex border border-gray-300 px-4 py-2">
-                {tour.status === "pending" ? (
+                {tour.status === "pending" || "Rejected" ? (
                   <button
                     className="bg-gray-300 text-gray-500 px-2 py-1 rounded cursor-not-allowed"
                     disabled
@@ -116,7 +116,7 @@ const AssignedTours = () => {
                 <button
                   className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 ml-2"
                   onClick={() => handleReject(tour._id)}
-                //   disabled={tour.status !== "pending"}
+                  disabled={tour.status !== "pending"}
                 >
                   Reject
                 </button>

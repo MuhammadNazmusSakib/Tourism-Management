@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+
+import { Contex } from "../../ContexApi/Contex";
 
 const JoinTourGuide = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const axiosSecure = useAxiosSecure()
+  const {user} = useContext(Contex)
   const [formData, setFormData] = useState({
     title: "",
     reason: "",
     cvLink: "",
+    role: "Tourist",
+    name: user.displayName,
+    email: user.email
   });
 
   const handleChange = (e) => {
@@ -19,7 +27,14 @@ const JoinTourGuide = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
-    setIsModalOpen(true); // Open modal on form submission
+    axiosSecure.post(`application`, formData)
+    .then(res => {
+      if (res.data.insertedId) {
+        console.log(res.data)
+        setIsModalOpen(true); // Open modal on form submission
+      }
+    })
+    
   };
 
   return (

@@ -32,6 +32,9 @@ import {
 } from '@tanstack/react-query'
 import EditStory from './Components/Routes/UserRoutes/EditStory';
 import AssignedTours from './Components/Routes/TourGuideRoutes/AssignedTours';
+import Payment from './Components/Routes/UserRoutes/Payment';
+import ManageUsers from './Components/Routes/AdminRoutes/ManageUsers';
+import ManageCandidates from './Components/Routes/AdminRoutes/ManageCandidates';
 
 const queryClient = new QueryClient()
 
@@ -102,10 +105,23 @@ const router = createBrowserRouter([
         path: "/dashboard/join-tour-guide",
         element: <JoinTourGuide />
       },
+      {
+        path: "/dashboard/payment",
+        element: <Payment/>
+      },
       // Tour Guide Route
       {
         path: "/dashboard/my-assigned-tours",
         element: <AssignedTours/>
+      },
+      // Admin Route
+      {
+        path: "/dashboard/manage-users",
+        element: <ManageUsers/>
+      },
+      {
+        path: "/dashboard/manage-candidates",
+        element: <ManageCandidates/>
       }
     ]
   },

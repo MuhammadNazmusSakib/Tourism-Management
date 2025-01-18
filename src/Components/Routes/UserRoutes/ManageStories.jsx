@@ -54,6 +54,13 @@ const ManageStories = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading stories</p>;
+  if (stories.length === 0) {
+    return (
+      <div className="text-center h-screen">
+        <p>No data available.</p>
+      </div>
+    )
+  }
 
   return (
     <div className="p-6 max-w-6xl mx-auto">

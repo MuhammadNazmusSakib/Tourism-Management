@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { FaUser, FaBook, FaRegNewspaper, FaPlusCircle, FaUserTie } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import useAdmin from "../../Hooks/useAdmin";
+import useTourGuide from "../../Hooks/useTourGuide";
 
 const Sidebar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation()
+  const [isAdmin] = useAdmin()
+  const [isTourGuide] = useTourGuide()
 
 
 
@@ -52,17 +56,27 @@ const Sidebar = () => {
             <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
             <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
 
-            
+
             {/* tour Guide Route */}
-            <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+            {
+              isTourGuide && <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+            }
+
 
             {/* Admin Route */}
-            <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
-            <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
-            <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+
+            {
+              isAdmin &&
+              <>
+                <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
+                <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
+                <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+              </>
+            }
+
 
           </nav>
-          
+
         </div>
       )}
 
@@ -83,12 +97,21 @@ const Sidebar = () => {
           <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
 
           {/* tour Guide Route */}
-          <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+          {
+            isTourGuide && <Link to="/dashboard/my-assigned-tours" ><SidebarLink icon={<FaUserTie />} label="My Assigned Tours" /></Link>
+          }
 
           {/* Admin Route */}
-          <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
-          <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
-          <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+
+          {
+            isAdmin &&
+            <>
+              <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
+              <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
+              <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+            </>
+          }
+
         </nav>
 
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Contex } from './Contex'
 import auth from '../FireBase/Firebase.config'
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 const DataProvider = ({ children }) => {
 
@@ -9,27 +10,44 @@ const DataProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const axiosPublic = useAxiosPublic()
 
     const createNewUser = (email, password) => {
-        // console.log("dfdy")
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            setLoading(false)
+            if (currentUser) {
+                // get token and store client
+                const userInfo = { email: currentUser.email };
+                axiosPublic.post('/jwt', userInfo)
+                    .then(res => {
+                        if (res.data.token) {
+                            localStorage.setItem('access-token', res.data.token);
+                            setLoading(false);
+                        }
+                    })
+            }
+            else {
+                //  remove token 
+                localStorage.removeItem('access-token');
+                setLoading(false);
+            }
         })
         return () => {
             unSubscribe()
         }
-    }, [])
+    }, [axiosPublic])
 
     const userLogin = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const logOut = () => {
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -40,7 +58,7 @@ const DataProvider = ({ children }) => {
 
     //  Google signIn
     const googleSignIn = () => {
-        // console.log("gfyug")
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
 

@@ -37,6 +37,8 @@ import ManageUsers from './Components/Routes/AdminRoutes/ManageUsers';
 import ManageCandidates from './Components/Routes/AdminRoutes/ManageCandidates';
 import AddPackage from './Components/Routes/AdminRoutes/AddPackage';
 import PaymentHistory from './Components/Routes/UserRoutes/PaymentHistory';
+import TourGuideRoute from './Components/Routes/TourGuideRoutes/TourGuideRoute';
+import AdminRoute from './Components/Routes/AdminRoutes/AdminRoute';
 
 const queryClient = new QueryClient()
 
@@ -118,20 +120,20 @@ const router = createBrowserRouter([
       // Tour Guide Route
       {
         path: "/dashboard/my-assigned-tours",
-        element: <AssignedTours/>
+        element: <TourGuideRoute><AssignedTours/></TourGuideRoute>
       },
       // Admin Route
       {
         path: "/dashboard/manage-users",
-        element: <ManageUsers/>
+        element: <AdminRoute><ManageUsers/></AdminRoute>
       },
       {
         path: "/dashboard/manage-candidates",
-        element: <ManageCandidates/>
+        element: <AdminRoute><ManageCandidates/></AdminRoute>
       },
       {
         path: "/dashboard/add-package",
-        element: <AddPackage/>
+        element: <AdminRoute><AddPackage/></AdminRoute>
       }
     ]
   },

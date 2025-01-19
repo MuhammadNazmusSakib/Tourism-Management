@@ -5,6 +5,7 @@ import { Contex } from "../../ContexApi/Contex";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { toast } from "react-toastify";
 import AdminDashboard from "../AdminRoutes/AdminDashboard";
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const ManageProfile = () => {
@@ -12,6 +13,7 @@ const ManageProfile = () => {
   const navigate = useNavigate();
   const { user } = useContext(Contex)
   const axiosSecure = useAxiosSecure()
+  const [isAdmin] = useAdmin()
 
   // Fetch user profile using React Query
   const { data: userProfile, isLoading, isError, error, refetch } = useQuery({
@@ -103,11 +105,13 @@ const ManageProfile = () => {
           </button>
         </div>
       </div>
-      <div className="py-4">
-        {
+      {
+        isAdmin &&
+        <div className="py-4">
           <AdminDashboard />
-        }
-      </div>
+        </div>
+      }
+
       {isEditModalOpen && (
         <EditModal
           userProfile={userProfile}

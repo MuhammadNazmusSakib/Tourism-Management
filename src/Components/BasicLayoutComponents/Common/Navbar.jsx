@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Contex } from "../../ContexApi/Contex";
 
 const Navbar = () => {
   const { user, logOut } = useContext(Contex);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -22,28 +24,53 @@ const Navbar = () => {
     };
   }, []);
 
+  // Determine if the current route requires black text
+  const isBlackTextRoute = ["/all-trips", "/all-stories", "/about"].includes(location.pathname);
+
   return (
     <header
       className={`sticky top-0 z-50 ${
-        isScrolled ? "bg-gray-200 shadow-md" : "bg-transparent text-white font-bold"
+        isScrolled ? "bg-white shadow-md" : "bg-transparent font-bold"
       } transition duration-300`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link to="/" className="flex items-center space-x-2">
-          <h1 className="text-xl font-bold">Tourist Guide</h1>
+          <h1 className={`font-bold text-xl ${
+              isBlackTextRoute || isScrolled ? "text-black" : "text-white"
+            }`}>Tourist Guide</h1>
         </Link>
 
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-blue-600">
+          <Link
+            to="/"
+            className={`hover:text-blue-600 ${
+              isBlackTextRoute || isScrolled ? "text-black" : "text-white"
+            }`}
+          >
             Home
           </Link>
-          <Link to="/all-stories" className="hover:text-blue-600">
+          <Link
+            to="/all-stories"
+            className={`hover:text-blue-600 ${
+              isBlackTextRoute || isScrolled ? "text-black" : "text-white"
+            }`}
+          >
             Community
           </Link>
-          <Link to="/about" className="hover:text-blue-600">
+          <Link
+            to="/about"
+            className={`hover:text-blue-600 ${
+              isBlackTextRoute || isScrolled ? "text-black" : "text-white"
+            }`}
+          >
             About Us
           </Link>
-          <Link to="/all-trips" className="hover:text-blue-600">
+          <Link
+            to="/all-trips"
+            className={`hover:text-blue-600 ${
+              isBlackTextRoute || isScrolled ? "text-black" : "text-white"
+            }`}
+          >
             Trips
           </Link>
         </nav>

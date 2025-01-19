@@ -57,6 +57,7 @@ const Sidebar = () => {
             {/* Admin Route */}
             <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
             <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
+            <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
 
           </nav>
           
@@ -64,7 +65,7 @@ const Sidebar = () => {
       )}
 
       {/* Sidebar for Larger Screens */}
-      <div className="hidden md:flex flex-col h-screen bg-gray-300 text-black">
+      <div className="hidden md:flex flex-col h-full bg-gray-300 text-black">
         {/* Logo Section */}
         <Link to="/" className="flex items-center justify-center h-20 bg-blue-700 shadow-md">
           <h1 className="text-2xl font-bold">Tourist Guide</h1>
@@ -84,6 +85,7 @@ const Sidebar = () => {
           {/* Admin Route */}
           <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
           <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
+          <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
         </nav>
 
 

@@ -31,7 +31,7 @@ const ManageCandidates = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSecure
-          .put(`/update-role/${candidateEmail}`, { role: "tour-guide" })
+          .put(`/update-role/${candidateEmail}`, { role: "Tourist Guide" })
           .then(() => {
             // Delete the application
             axiosSecure.delete(`/delete-application/${candidateId}`).then(() => {
@@ -86,6 +86,7 @@ const ManageCandidates = () => {
           <table className="table-auto w-full border-collapse border border-gray-300">
             <thead>
               <tr>
+                <th className="border border-gray-300 px-4 py-2">Serial</th>
                 <th className="border border-gray-300 px-4 py-2">Name</th>
                 <th className="border border-gray-300 px-4 py-2">Email</th>
                 <th className="border border-gray-300 px-4 py-2">Role</th>
@@ -93,12 +94,13 @@ const ManageCandidates = () => {
               </tr>
             </thead>
             <tbody>
-              {candidates.map((candidate) => (
+              {candidates.map((candidate, idx) => (
                 <tr key={candidate._id}>
+                  <td className="border border-gray-300 text-center px-4 py-2">{idx + 1}</td>
                   <td className="border border-gray-300 px-4 py-2">{candidate.name}</td>
                   <td className="border border-gray-300 px-4 py-2">{candidate.email}</td>
                   <td className="border border-gray-300 px-4 py-2">{candidate.role}</td>
-                  <td className="border border-gray-300 px-4 py-2 flex gap-2">
+                  <td className="border border-gray-300 px-4 py-2 flex justify-center gap-2">
                     <button
                       onClick={() => handleAccept(candidate._id, candidate.email)}
                       className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"

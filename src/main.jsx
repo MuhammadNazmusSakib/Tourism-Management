@@ -35,6 +35,7 @@ import AssignedTours from './Components/Routes/TourGuideRoutes/AssignedTours';
 import Payment from './Components/Routes/UserRoutes/Payment';
 import ManageUsers from './Components/Routes/AdminRoutes/ManageUsers';
 import ManageCandidates from './Components/Routes/AdminRoutes/ManageCandidates';
+import AddPackage from './Components/Routes/AdminRoutes/AddPackage';
 
 const queryClient = new QueryClient()
 
@@ -122,6 +123,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/manage-candidates",
         element: <ManageCandidates/>
+      },
+      {
+        path: "/dashboard/add-package",
+        element: <AddPackage/>
       }
     ]
   },

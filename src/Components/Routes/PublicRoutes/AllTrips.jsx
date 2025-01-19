@@ -41,8 +41,9 @@ const AllTrips = () => {
                             key={idx}
                             className="bg-white flex flex-col justify-between rounded-lg shadow-lg overflow-hidden"
                         >
+                            
                             <img
-                                src={pkg.image}
+                                src={pkg?.gallery?.[0]?.src} // show the 1st image here
                                 alt={pkg.title}
                                 className="w-full h-48 object-cover"
                             />

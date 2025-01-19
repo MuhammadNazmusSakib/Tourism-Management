@@ -40,8 +40,8 @@ const Information = ({ packageDetails }) => {
 
         {/* Rating */}
         <div className="flex items-center text-yellow-500 space-x-2 mb-6">
-          <span className="text-lg font-bold">{packageDetails.rating.stars} ★</span>
-          <span className="text-sm text-gray-500">({packageDetails.rating.reviews} Reviews)</span>
+          <span className="text-lg font-bold">{packageDetails.rating?.stars || ''} ★</span>
+          <span className="text-sm text-gray-500">({packageDetails.rating?.reviews || ''} Reviews)</span>
         </div>
 
         {/* Information Grid */}

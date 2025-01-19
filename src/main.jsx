@@ -36,6 +36,7 @@ import Payment from './Components/Routes/UserRoutes/Payment';
 import ManageUsers from './Components/Routes/AdminRoutes/ManageUsers';
 import ManageCandidates from './Components/Routes/AdminRoutes/ManageCandidates';
 import AddPackage from './Components/Routes/AdminRoutes/AddPackage';
+import PaymentHistory from './Components/Routes/UserRoutes/PaymentHistory';
 
 const queryClient = new QueryClient()
 
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/payment",
         element: <Payment/>
+      },
+      {
+        path: "/dashboard/payment-history",
+        element: <PaymentHistory/>
       },
       // Tour Guide Route
       {

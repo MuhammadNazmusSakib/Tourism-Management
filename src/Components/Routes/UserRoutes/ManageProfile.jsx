@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Contex } from "../../ContexApi/Contex";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { toast } from "react-toastify";
+import AdminDashboard from "../AdminRoutes/AdminDashboard";
 
 
 const ManageProfile = () => {
@@ -40,7 +41,7 @@ const ManageProfile = () => {
       <h1 className="text-2xl font-bold mb-4">
         Welcome, {userProfile.displayName}!
       </h1>
-      
+
       <div>
         <div className="flex flex-col md:flex-row gap-6">
           {/* Image Section */}
@@ -88,19 +89,24 @@ const ManageProfile = () => {
           </div>
         </div>
         <div className="mt-4 flex gap-4">
-            <button
-              onClick={() => setIsEditModalOpen(true)}
-              className="px-4 py-2 bg-blue-500 text-white rounded"
-            >
-              Edit Profile
-            </button>
-            <button
-              onClick={() => navigate("/dashboard/join-tour-guide")}
-              className="px-4 py-2 bg-green-500 text-white rounded"
-            >
-              Apply for Tour Guide
-            </button>
-          </div>
+          <button
+            onClick={() => setIsEditModalOpen(true)}
+            className="px-4 py-2 bg-blue-500 text-white rounded"
+          >
+            Edit Profile
+          </button>
+          <button
+            onClick={() => navigate("/dashboard/join-tour-guide")}
+            className="px-4 py-2 bg-green-500 text-white rounded"
+          >
+            Apply for Tour Guide
+          </button>
+        </div>
+      </div>
+      <div className="py-4">
+        {
+          <AdminDashboard />
+        }
       </div>
       {isEditModalOpen && (
         <EditModal

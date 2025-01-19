@@ -98,7 +98,7 @@ const AssignedTours = () => {
               <td className="border border-gray-300 px-4 py-2">${tour.price}</td>
               <td className="border border-gray-300 px-4 py-2">{tour.status}</td>
               <td className="flex border border-gray-300 px-4 py-2">
-                {tour.status === "pending" || "Rejected" ? (
+                {tour.status === "pending" ? (
                   <button
                     className="bg-gray-300 text-gray-500 px-2 py-1 rounded cursor-not-allowed"
                     disabled
@@ -107,7 +107,8 @@ const AssignedTours = () => {
                   </button>
                 ) : (
                   <button
-                    className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+                    className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600" 
+                    disabled={tour.status == "Rejected"}
                     onClick={() => handleAccept(tour._id)}
                   >
                     Accept

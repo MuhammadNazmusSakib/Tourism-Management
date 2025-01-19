@@ -5,7 +5,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm"
 
 
-const stripePromise = loadStripe("your-publishable-key");
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 
 const Payment = () => {
   const location = useLocation();
@@ -20,7 +20,7 @@ const Payment = () => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Payment for {booking.packageName}</h1>
-      <p>Price: ${booking.price}</p>
+      <p className="py-2">Price: ${booking.price}</p>
       <Elements stripe={stripePromise}>
         <CheckoutForm booking={booking} />
       </Elements>

@@ -6,30 +6,46 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Community = () => {
   const navigate = useNavigate();
-  const {user} = useState(Contex)
+  const { user } = useState(Contex);
 
-  const [stories, setStories] = useState(null)
-  const axiosPublic = useAxiosPublic()
-  const [loading, setLoading] = useState(true)
+  const [stories, setStories] = useState(null);
+  const axiosPublic = useAxiosPublic();
+  const [loading, setLoading] = useState(true);
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
   useEffect(() => {
-      axiosPublic.get('stories')
-      .then(res => setStories(res.data))
-      .then(setLoading(false))
-  }, [])
+    axiosPublic
+      .get("stories")
+      .then((res) => setStories(res.data))
+      .then(() => setLoading(false));
+  }, []);
 
   if (loading || !stories) {
-      return (
-          <div className="flex items-center justify-center h-screen bg-gray-100">
-              <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
-          </div>
-      )
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+      </div>
+    );
   }
 
   const handleShare = (url) => {
     if (!user) {
       navigate("/login");
     }
+  };
+
+  // Pagination logic
+  const totalPages = Math.ceil(stories.length / itemsPerPage);
+  const paginatedStories = stories.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
@@ -39,8 +55,11 @@ const Community = () => {
           Tourist Stories
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stories.map((story) => (
-            <div key={story._id} className="bg-white flex flex-col justify-between rounded-lg shadow-lg overflow-hidden">
+          {paginatedStories.map((story) => (
+            <div
+              key={story._id}
+              className="bg-white flex flex-col justify-between rounded-lg shadow-lg overflow-hidden"
+            >
               <img
                 src={story.images[0]}
                 alt={story.title}
@@ -62,7 +81,23 @@ const Community = () => {
             </div>
           ))}
         </div>
-        {/*  */}
+
+        {/* Pagination Controls */}
+        <div className="flex justify-center mt-8 gap-2">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => handlePageChange(index + 1)}
+              className={`px-4 py-2 rounded ${
+                currentPage === index + 1
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

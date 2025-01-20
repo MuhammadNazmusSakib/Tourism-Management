@@ -49,12 +49,12 @@ const Banner = () => {
                   {slide.title}
                 </h1>
                 <p className="text-lg md:text-xl mb-6">{slide.description}</p>
-                <a
+                {/* <a
                   href="#explore"
                   className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition duration-300"
                 >
                   Explore Now
-                </a>
+                </a> */}
               </div>
             </div>
           </SwiperSlide>

@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FacebookShareButton, FacebookIcon } from "react-share";
-import { Contex } from "../../ContexApi/Contex";
+
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { MdFacebook } from "react-icons/md";
+import { Contex } from "../../ContexApi/Contex";
+
+
 
 const Community = () => {
   const navigate = useNavigate();
-  const { user } = useState(Contex);
+  const { user } = useContext(Contex);
 
   const [stories, setStories] = useState(null);
   const axiosPublic = useAxiosPublic();
   const [loading, setLoading] = useState(true);
+  const location = useLocation()
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,12 +35,10 @@ const Community = () => {
       </div>
     );
   }
+  console.log(user)
 
-  const handleShare = (url) => {
-    if (!user) {
-      navigate("/login");
-    }
-  };
+ 
+
 
   // Pagination logic
   const totalPages = Math.ceil(stories.length / itemsPerPage);
@@ -68,15 +71,35 @@ const Community = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{story.title}</h3>
                 <p className="text-gray-600 mb-4">{story.text}</p>
-                <FacebookShareButton
-                  url={story.url}
-                  quote={story.title}
-                  onClick={() => handleShare(story.url)}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
-                >
-                  <FacebookIcon size={24} round />
-                  Share on Facebook
-                </FacebookShareButton>
+
+                <div className="flex items-center gap-3">
+
+                  {
+                    user ? 
+                    <div className="flex items-center justify-center py-1 px-2 w-full rounded-md bg-slate-300">
+                   
+                    <FacebookShareButton
+                      url={`${window.location.origin}/all-stories/${story._id}`}
+                      quote={story.title}
+                      onClick={() => handleShare(story._id)}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+                    >
+                      <FacebookIcon size={24} round />
+                      Share
+                    </FacebookShareButton>
+                  </div>
+                  :
+                  <Link to="/login" className="flex items-center gap-2 justify-center py-1 px-2 w-full rounded-md bg-slate-300">
+                    <MdFacebook className="text-blue-600 text-lg" />
+                   <span>Share</span>
+                  </Link>
+                  }
+                  
+
+
+                  <Link to={`/all-stories/${story._id}`} className="px-2 py-1 text-center rounded-md bg-slate-300 w-full">view</Link>
+                </div>
+
               </div>
             </div>
           ))}
@@ -88,11 +111,10 @@ const Community = () => {
             <button
               key={index + 1}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-4 py-2 rounded ${
-                currentPage === index + 1
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              }`}
+              className={`px-4 py-2 rounded ${currentPage === index + 1
+                ? "bg-blue-500 text-white"
+                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                }`}
             >
               {index + 1}
             </button>
@@ -104,3 +126,6 @@ const Community = () => {
 };
 
 export default Community;
+
+
+

@@ -53,7 +53,11 @@ const Sidebar = () => {
             <Link to="/dashboard/my-bookings" ><SidebarLink icon={<FaBook />} label="My Bookings" /></Link>
             <Link to="/dashboard/manage-stories" ><SidebarLink icon={<FaRegNewspaper />} label="Manage Stories" /></Link>
             <Link to="/dashboard/add-stories" ><SidebarLink icon={<FaPlusCircle />} label="Add Stories" /></Link>
-            <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+            {
+              isTourGuide || <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+            }
+
+
             <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
 
 
@@ -93,7 +97,9 @@ const Sidebar = () => {
           <Link to="/dashboard/my-bookings"><SidebarLink icon={<FaBook />} label="My Bookings" /></Link>
           <Link to="/dashboard/manage-stories"><SidebarLink icon={<FaRegNewspaper />} label="Manage Stories" /></Link>
           <Link to="/dashboard/add-stories"><SidebarLink icon={<FaPlusCircle />} label="Add Stories" /></Link>
-          <Link to="/dashboard/join-tour-guide"><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+          {
+            isTourGuide || <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
+          }
           <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
 
           {/* tour Guide Route */}

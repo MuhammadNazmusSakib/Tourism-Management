@@ -25,7 +25,10 @@ const Navbar = () => {
   }, []);
 
   // Determine if the current route requires black text
-  const isBlackTextRoute = ["/all-trips", "/all-stories", "/about"].includes(location.pathname);
+  // const isBlackTextRoute = ["/all-trips", "/all-stories", "/about", "/all-stories/id"].includes(location.pathname);
+  const isBlackTextRoute = ["/all-trips", "/all-stories", "/about", "/login", "/signup"].some(route =>
+    location.pathname.startsWith(route)
+  );
 
   return (
     <header

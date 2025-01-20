@@ -39,6 +39,8 @@ import AddPackage from './Components/Routes/AdminRoutes/AddPackage';
 import PaymentHistory from './Components/Routes/UserRoutes/PaymentHistory';
 import TourGuideRoute from './Components/Routes/TourGuideRoutes/TourGuideRoute';
 import AdminRoute from './Components/Routes/AdminRoutes/AdminRoute';
+import ErrorPage from './Components/BasicLayoutComponents/Common/ErrorPage';
+import StoryDetails from './Components/Routes/PublicRoutes/StoryDetails';
 
 const queryClient = new QueryClient()
 
@@ -46,6 +48,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <BasicLayout />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
@@ -62,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/all-stories",
         element: <Community />
+      },
+      {
+        path: "/all-stories/:id",
+        element: <StoryDetails/>
       },
       {
         path: "/about",

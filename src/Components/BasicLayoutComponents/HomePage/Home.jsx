@@ -5,8 +5,10 @@ import Overview from './Overview'
 import TourismGuideSection from './TourismGuideSection'
 import TouristStorySection from './TouristStorySection'
 import TestimonialsAndMemories from './TestimonialsAndMemories'
+import useDynamicTitle from '../../Hooks/useDynamicTitle'
 
 const Home = () => {
+  useDynamicTitle("Tourist Guide | Home ")
   return (
     <div>
       <Banner/>

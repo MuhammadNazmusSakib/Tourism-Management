@@ -71,7 +71,7 @@ const AssignedTours = () => {
   }
 
   if (assignedTours.length === 0) {
-    return <p>No assigned tours available.</p>;
+    return <p className="h-full">No assigned tours available.</p>;
   }
 
   return (

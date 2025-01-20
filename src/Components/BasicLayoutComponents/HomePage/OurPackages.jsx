@@ -36,7 +36,7 @@ const OurPackages = () => {
                     className="bg-white rounded-lg shadow-lg overflow-hidden"
                 >
                     <img
-                        src={pkg.image}
+                        src={pkg?.gallery?.[0]?.src} // Show the 1st image here
                         alt={pkg.title}
                         className="w-full h-48 object-cover"
                     />

@@ -5,25 +5,25 @@ const Overview = () => {
     {
       id: 1,
       title: "Explore Stunning Landscapes",
-      videoUrl: "https://www.youtube.com/embed/tgbNymZ7vqY",
+      videoUrl: "https://www.youtube.com/embed/TMLR-GsF4oQ?si=Q6S5fUZiZQcmNhcO",
       description: "Discover breathtaking views and nature's beauty.",
     },
     {
       id: 2,
-      title: "Connect with Local Guides",
-      videoUrl: "https://www.youtube.com/embed/k2qgadSvNyU",
+      title: "Connect with Local People",
+      videoUrl: "https://www.youtube.com/embed/Qfm1NIfLJ5M?si=1cliEBqj2qf5Cex5",
       description: "Get insights from experienced locals for a personalized trip.",
     },
     {
       id: 3,
       title: "Plan the Perfect Trip",
-      videoUrl: "https://www.youtube.com/embed/1G4isv_Fylg",
+      videoUrl: "https://www.youtube.com/embed/DzeaIkSKtWc?si=E-zCWXwhEuOSny1w",
       description: "Create a customized itinerary tailored to your needs.",
     },
     {
       id: 4,
       title: "Experience Local Culture",
-      videoUrl: "https://www.youtube.com/embed/e-ORhEE9VVg",
+      videoUrl: "https://www.youtube.com/embed/G8-QkYVnwhg?si=ga0hXdZGa5w8ZRFF",
       description: "Dive into the rich traditions and vibrant life of local communities.",
     },
   ];

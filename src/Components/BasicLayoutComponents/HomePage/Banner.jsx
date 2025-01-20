@@ -14,19 +14,19 @@ const Banner = () => {
       id: 1,
       title: "Discover the Beauty of Bangladesh",
       description: "Explore stunning landscapes, vibrant culture, and hidden gems.",
-      image: "https://source.unsplash.com/1200x600/?nature,water",
+      image: "https://i.ibb.co.com/Fm00Dv7/Plan-Your-Perfect-Trip.jpg",
     },
     {
       id: 2,
       title: "Plan Your Perfect Trip",
       description: "Find the best destinations, activities, and local cuisine.",
-      image: "https://source.unsplash.com/1200x600/?beach,sunset",
+      image: "https://i.ibb.co.com/JdYPG11/Discover-the-Beauty-of-Bangladesh.jpg",
     },
     {
       id: 3,
-      title: "Connect with Local Guides",
+      title: "Connect with Local People",
       description: "Get personalized tours and experience authentic hospitality.",
-      image: "https://source.unsplash.com/1200x600/?forest,mountain",
+      image: "https://i.ibb.co.com/JHSK51y/Connect-with-Local-Guides.jpg",
     },
   ];
 

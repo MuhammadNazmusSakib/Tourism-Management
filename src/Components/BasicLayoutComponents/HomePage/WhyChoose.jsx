@@ -13,17 +13,18 @@ const WhyChoose = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Video Section */}
-          <div className="relative aspect-w-16 aspect-h-9">
-            <iframe
-              className="w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              title="Tour WhyChoose Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          {/* <div className="relative aspect-w-16 aspect-h-9">
+            <img src="https://i.ibb.co.com/sHyKDqK/Why-Choose-Tourist-Guide.jpg" alt="" />
+            
+          </div> */}
+          <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
+            <img
+              src="https://i.ibb.co.com/sHyKDqK/Why-Choose-Tourist-Guide.jpg"
+              alt="Tourist Guide"
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
           </div>
 
           {/* Text Content */}

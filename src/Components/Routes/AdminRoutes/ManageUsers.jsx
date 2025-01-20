@@ -83,13 +83,13 @@ const ManageUsers = () => {
             <h1 className="text-2xl font-bold mb-4">Manage Users</h1>
 
             {/* Search and Filter */}
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
                 <input
                     type="text"
                     placeholder="Search by name or email"
                     value={searchQuery}
                     onChange={handleSearch}
-                    className="border rounded p-2 flex-1"
+                    className="border rounded p-2 flex-1 w-full"
                 />
                 <Select
                     options={rolesOptions}
@@ -97,7 +97,7 @@ const ManageUsers = () => {
                     onChange={handleRoleFilter}
                     isClearable
                     placeholder="Filter by Role"
-                    className="flex-1"
+                    className="flex-1 w-full"
                 />
             </div>
 

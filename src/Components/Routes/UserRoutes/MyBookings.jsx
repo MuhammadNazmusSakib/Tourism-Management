@@ -55,15 +55,19 @@ const MyBookings = () => {
   };
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <div className="">Loading...</div>;
   }
 
   if (bookings.length === 0) {
-    return <p>No bookings available.</p>;
+    return (
+      <div className="text-center h-screen flex items-center justify-center">
+        <p className="text-gray-600">No Booking available.</p>
+      </div>
+    )
   }
 
   return (
-    <div className="overflow-x-auto p-4">
+    <div className="overflow-x-auto min-h-screen p-4">
       <table className="table-auto w-full border-collapse border border-gray-300">
         <thead>
           <tr>

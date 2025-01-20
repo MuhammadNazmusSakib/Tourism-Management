@@ -6,7 +6,7 @@ import Footer from '../BasicLayoutComponents/Common/Footer'
 const DashboardLayout = () => {
   return (
     <div className='max-w-screen-2xl mx-auto'>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col h-full md:flex-row">
         {/* Sidebar */}
         <Sidebar />
 

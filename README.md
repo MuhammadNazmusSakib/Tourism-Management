@@ -60,4 +60,3 @@
 - **Authentication:** JSON Web Tokens (JWT)  
 
 ---
-

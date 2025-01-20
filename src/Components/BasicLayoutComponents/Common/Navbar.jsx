@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Contex } from "../../ContexApi/Contex";
+import icon from "/icon.png"
 
 const Navbar = () => {
   const { user, logOut } = useContext(Contex);
@@ -38,6 +39,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link to="/" className="flex items-center space-x-2">
+        <span><img src={icon} alt="" /></span>
           <h1 className={`font-bold text-xl ${
               isBlackTextRoute || isScrolled ? "text-black" : "text-white"
             }`}>Tourist Guide</h1>

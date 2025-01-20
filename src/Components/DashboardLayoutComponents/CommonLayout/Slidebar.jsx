@@ -3,6 +3,9 @@ import { FaUser, FaBook, FaRegNewspaper, FaPlusCircle, FaUserTie } from "react-i
 import { Link, useLocation } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import useTourGuide from "../../Hooks/useTourGuide";
+import icon from "/icon.png"
+import { MdManageAccounts, MdOutlineManageAccounts, MdPayment } from "react-icons/md";
+import { IoIosAddCircle } from "react-icons/io";
 
 const Sidebar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,7 +20,7 @@ const Sidebar = () => {
     <div>
       {/* Dropdown Button for Small Screens */}
       <div className="md:hidden bg-blue-700 text-white flex justify-between items-center p-4">
-        <Link to="/"><h1 className=" text-2xl font-bold">Tourist Guide</h1></Link>
+        <Link to="/" className="flex items-center gap-2"><span><img src={icon} alt="" /></span><h1 className=" text-2xl font-bold">Tourist Guide</h1></Link>
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="text-white focus:outline-none"
@@ -58,7 +61,7 @@ const Sidebar = () => {
             }
 
 
-            <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
+            <Link to="/dashboard/payment-history" ><SidebarLink icon={<MdPayment />} label="Payment History" /></Link>
 
 
             {/* tour Guide Route */}
@@ -72,9 +75,9 @@ const Sidebar = () => {
             {
               isAdmin &&
               <>
-                <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
-                <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
-                <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+                <Link to="/dashboard/manage-users" ><SidebarLink icon={<MdManageAccounts />} label="Manage Users" /></Link>
+                <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<MdOutlineManageAccounts  />} label="Manage Candidates" /></Link>
+                <Link to="/dashboard/add-package" ><SidebarLink icon={<IoIosAddCircle />} label="Add Package" /></Link>
               </>
             }
 
@@ -87,7 +90,8 @@ const Sidebar = () => {
       {/* Sidebar for Larger Screens */}
       <div className="hidden md:flex flex-col h-full bg-gray-300 text-black">
         {/* Logo Section */}
-        <Link to="/" className="flex items-center justify-center h-20 bg-blue-700 shadow-md">
+        <Link to="/" className="flex items-center gap-2 justify-center h-20 bg-blue-700 shadow-md">
+        <span><img src={icon} alt="" /></span>
           <h1 className="text-2xl font-bold">Tourist Guide</h1>
         </Link>
 
@@ -100,7 +104,7 @@ const Sidebar = () => {
           {
             isTourGuide || <Link to="/dashboard/join-tour-guide" ><SidebarLink icon={<FaUserTie />} label="Join as Tour Guide" /></Link>
           }
-          <Link to="/dashboard/payment-history" ><SidebarLink icon={<FaUserTie />} label="Payment History" /></Link>
+          <Link to="/dashboard/payment-history" ><SidebarLink icon={<MdPayment />} label="Payment History" /></Link>
 
           {/* tour Guide Route */}
           {
@@ -112,9 +116,9 @@ const Sidebar = () => {
           {
             isAdmin &&
             <>
-              <Link to="/dashboard/manage-users" ><SidebarLink icon={<FaUserTie />} label="Manage Users" /></Link>
-              <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<FaUserTie />} label="Manage Candidates" /></Link>
-              <Link to="/dashboard/add-package" ><SidebarLink icon={<FaUserTie />} label="Add Package" /></Link>
+              <Link to="/dashboard/manage-users" ><SidebarLink icon={<MdManageAccounts />} label="Manage Users" /></Link>
+              <Link to="/dashboard/manage-candidates" ><SidebarLink icon={<MdOutlineManageAccounts />} label="Manage Candidates" /></Link>
+              <Link to="/dashboard/add-package" ><SidebarLink icon={<IoIosAddCircle />} label="Add Package" /></Link>
             </>
           }
 

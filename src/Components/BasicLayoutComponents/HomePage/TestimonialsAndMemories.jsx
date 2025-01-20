@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+// import { Pagination } from "swiper/modules";
+import { Pagination } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
 
 const testimonials = [
     {

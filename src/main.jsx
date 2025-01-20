@@ -41,6 +41,7 @@ import TourGuideRoute from './Components/Routes/TourGuideRoutes/TourGuideRoute';
 import AdminRoute from './Components/Routes/AdminRoutes/AdminRoute';
 import ErrorPage from './Components/BasicLayoutComponents/Common/ErrorPage';
 import StoryDetails from './Components/Routes/PublicRoutes/StoryDetails';
+import Offer from './Components/Routes/UserRoutes/Offer';
 
 const queryClient = new QueryClient()
 
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/payment-history",
         element: <PaymentHistory/>
+      },
+      {
+        path: "/dashboard/offer",
+        element: <Offer/>
       },
       // Tour Guide Route
       {

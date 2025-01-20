@@ -6,7 +6,7 @@ import useDynamicTitle from "../../Hooks/useDynamicTitle";
 const ErrorPage = () => {
     useDynamicTitle("Error | 404 ")
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-white bg-slate-100">
       <div className="text-center">
         {/* Error Message */}
         <h1 className="text-9xl font-extrabold text-blue-600">404</h1>

@@ -26,11 +26,11 @@ const JoinTourGuide = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted", formData);
+    //console.log("Form Submitted", formData);
     axiosSecure.post(`application`, formData)
     .then(res => {
       if (res.data.insertedId) {
-        console.log(res.data)
+        //console.log(res.data)
         setIsModalOpen(true); // Open modal on form submission
       }
     })

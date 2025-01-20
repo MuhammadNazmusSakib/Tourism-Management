@@ -61,7 +61,7 @@ const SignUp = () => {
             axiosPublic.post('/users', userInfo)
               .then(res => {
                 if (res.data.insertedId) {
-                  console.log('user added.')
+                  //console.log('user added.')
                 }
               })
             const redirectPath = location.state?.from || "/"
@@ -104,7 +104,7 @@ const SignUp = () => {
         axiosPublic.post('/users', userInfo)
           .then(res => {
             if (res.data.insertedId) {
-              console.log('google signin user added.')
+              //console.log('google signin user added.')
             }
           })
 

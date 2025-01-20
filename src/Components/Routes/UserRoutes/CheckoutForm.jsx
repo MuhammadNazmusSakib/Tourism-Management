@@ -33,11 +33,11 @@ const CheckoutForm = ({ booking }) => {
     });
 
     if (error) {
-      console.log('Payment error:', error);
+      //console.log('Payment error:', error);
       setError(error.message);
       return;
     } else {
-      console.log('Payment method:', paymentMethod);
+      //console.log('Payment method:', paymentMethod);
       setError('');
     }
 
@@ -59,7 +59,7 @@ const CheckoutForm = ({ booking }) => {
       });
 
       if (confirmError) {
-        console.log('Confirm error:', confirmError);
+       // console.log('Confirm error:', confirmError);
         setError(confirmError.message);
         return;
       }
@@ -94,7 +94,7 @@ const CheckoutForm = ({ booking }) => {
         axiosSecure.patch(`/update-booking-status/${booking._id}`, { status: "In Review" })
         .then(res => {
           navigate('/dashboard/payment-history')
-          console.log(res.data)
+          //console.log(res.data)
         })
         })
         //console.log(res.data)

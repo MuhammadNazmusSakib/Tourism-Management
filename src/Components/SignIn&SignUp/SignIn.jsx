@@ -37,7 +37,7 @@ const SignIn = () => {
         axiosPublic.post('/users', userInfo)
           .then(res => {
             if (res.data.insertedId) {
-              console.log('google signin user added.')
+              //console.log('google signin user added.')
             }
           })
 

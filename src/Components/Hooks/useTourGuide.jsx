@@ -11,7 +11,7 @@ const useTourGuide = () => {
         queryKey: [user?.email, 'isTourGuide'],
         enabled: !loading,
         queryFn: async () => {
-            console.log('asking or checking is tourGuide', user)
+            //console.log('asking or checking is tourGuide', user)
             const res = await axiosSecure.get(`/users/tourGuide/${user.email}`);
             // console.log(res.data);
             return res.data?.tourGuide;

@@ -33,7 +33,7 @@ const ManageProfile = () => {
   // Function to handle editing user details
   const handleEditSave = (updatedDetails) => {
     // Logic to update user profile
-    console.log("Updated details:", updatedDetails);
+    //console.log("Updated details:", updatedDetails);
     refetch()
     setIsEditModalOpen(false);
   };

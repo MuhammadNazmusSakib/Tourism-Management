@@ -25,7 +25,7 @@ const BookingForm = ({ packageDetails }) => {
     axiosPublic.get('users/tourist-guides')
       .then(res => {
         setTourGuides(res.data)
-        console.log(tourGuides)
+        //console.log(tourGuides)
       })
   }, [])
 
@@ -60,18 +60,18 @@ const BookingForm = ({ packageDetails }) => {
     };
 
     // Simulate storing booking data (you can replace this with an API call)
-    console.log("Booking Information:", bookingData);
+    //console.log("Booking Information:", bookingData);
 
     axiosSecure.post(`add-booking`, bookingData)
       .then(res => {
         if (res.data.insertedId) {
-          console.log(res.data)
+          //console.log(res.data)
           // Show confirmation modal
           setShowModal(true);
         }
       })
   };
-  console.log(user)
+  //console.log(user)
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">

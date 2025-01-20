@@ -35,7 +35,7 @@ const Community = () => {
       </div>
     );
   }
-  console.log(user)
+ // console.log(user)
 
  
 

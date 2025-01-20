@@ -78,7 +78,7 @@ const EditStory = () => {
         title: story.title,
         text: story.text,
       });
-      console.log(newEditedStory.data)
+      //console.log(newEditedStory.data)
       if (newEditedStory.data.modifiedCount > 0 || newEditedStory.data.matchedCount === 1) {
         Swal.fire({
           title: "Success!",

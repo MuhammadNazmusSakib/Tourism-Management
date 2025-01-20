@@ -43,6 +43,7 @@ const SignUp = () => {
       .then(result => {
         const user = result.user
         setUser(user)
+        toast('Register Successfull.')
 
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
@@ -88,6 +89,7 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user
         setUser(user)
+        toast('Register Successfull.')
         const userInfo = {
           displayName: user.displayName,
           photoURL: user.photoURL,

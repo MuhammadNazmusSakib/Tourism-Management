@@ -42,6 +42,7 @@ import AdminRoute from './Components/Routes/AdminRoutes/AdminRoute';
 import ErrorPage from './Components/BasicLayoutComponents/Common/ErrorPage';
 import StoryDetails from './Components/Routes/PublicRoutes/StoryDetails';
 import Offer from './Components/Routes/UserRoutes/Offer';
+import ForgotPassword from './Components/SignIn&SignUp/ForgotPassword';
 
 const queryClient = new QueryClient()
 
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <SignIn />
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword/>
       },
       {
         path: "/all-stories",

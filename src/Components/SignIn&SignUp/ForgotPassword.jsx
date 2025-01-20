@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 // import { sendPasswordResetEmail } from 'firebase/auth';
 // import { auth } from '../Firebase/firebase.config';
 import { toast } from 'react-toastify';
-import { Contex } from '../../ContexApi/Contex';
+import { Contex } from '../ContexApi/Contex';
+
 
 const ForgotPassword = () => {
 

@@ -5,6 +5,7 @@ import { useWindowSize } from "react-use";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Contex } from "../../ContexApi/Contex";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Offer = () => {
     const [bookings, setBookings] = useState([]);
@@ -12,6 +13,7 @@ const Offer = () => {
     const { width, height } = useWindowSize(); // Get window dimensions
     const axiosSecure = useAxiosSecure();
     const { user } = useContext(Contex);
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchUserBookings = async () => {
@@ -89,7 +91,9 @@ const Offer = () => {
                         </p>
                         <button
                             className="px-4 py-2 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-                            onClick={() => toast("Discount Applied!")}
+                            onClick={() => toast("Discount Applied!")
+                                .then(navigate('/'))
+                            }
                         >
                             Apply Discount
                         </button>

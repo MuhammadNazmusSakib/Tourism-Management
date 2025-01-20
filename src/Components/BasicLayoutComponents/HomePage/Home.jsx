@@ -4,6 +4,7 @@ import WhyChoose from './WhyChoose'
 import Overview from './Overview'
 import TourismGuideSection from './TourismGuideSection'
 import TouristStorySection from './TouristStorySection'
+import TestimonialsAndMemories from './TestimonialsAndMemories'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <TourismGuideSection/>
       <TouristStorySection/>
       <WhyChoose/>
+      <TestimonialsAndMemories/>
     </div>
   )
 }

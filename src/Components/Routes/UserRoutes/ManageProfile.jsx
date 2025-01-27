@@ -27,7 +27,7 @@ const ManageProfile = () => {
     enabled: !!user.email, // Ensure query runs only if user.email is defined
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="min-h-screen">Loading...</div>;
   if (isError) return <div>Error: {error.message}</div>;
 
   // Function to handle editing user details
@@ -39,7 +39,7 @@ const ManageProfile = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="min-h-screen p-6">
       <h1 className="text-2xl font-bold mb-4">
         Welcome, {userProfile.displayName}!
       </h1>

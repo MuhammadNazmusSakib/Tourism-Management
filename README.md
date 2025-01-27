@@ -1,7 +1,13 @@
 # Tourist Management System  
 
 **Admin Username:** `admin@gmail.com`  
-**Admin Password:** `123456Aa`  
+**Admin Password:** `123456Aa` 
+
+**Tour Guide Username:** `ethan@example.com`
+**Tour Guide Password:** `123456Aa`
+
+
+**Server Site Code** [Server Site Code](https://github.com/MuhammadNazmusSakib/Tourism-Management-Server)
 
 **Live Site URL:** [Tourist Management System](https://tourist-management-385fe.web.app/)  
 

@@ -12,7 +12,11 @@ const TourGuideRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading || isTourGuideLoading) {
-        return <progress className="progress w-56"></progress>
+        return (
+            <div className="min-h-screen">
+                <progress className="progress w-56"></progress>
+            </div>
+        )
     }
 
     if (user && isTourGuide) {

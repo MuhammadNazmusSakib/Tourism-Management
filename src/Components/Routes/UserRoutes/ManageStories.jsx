@@ -52,18 +52,18 @@ const ManageStories = () => {
     });
 }
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <div className="min-h-screen">Loading...</div>;
   if (error) return <p>Error loading stories</p>;
   if (stories.length === 0) {
     return (
-      <div className="text-center h-screen">
+      <div className="text-center min-h-screen">
         <p>No data available.</p>
       </div>
     )
   }
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="p-6 min-h-screen max-w-6xl mx-auto">
       <h2 className="text-2xl font-bold text-gray-700 mb-6">Manage Stories</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {stories.map((story) => (

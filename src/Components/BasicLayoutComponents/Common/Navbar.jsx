@@ -104,14 +104,14 @@ const Navbar = () => {
                         Dashboard
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/dashboard/offer"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                       >
                         Offer Announcements
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <button
                         onClick={logOut}

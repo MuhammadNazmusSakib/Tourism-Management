@@ -67,15 +67,15 @@ const AssignedTours = () => {
   };
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <div className="min-h-screen">Loading...</div>;
   }
 
   if (assignedTours.length === 0) {
-    return <p className="h-full">No assigned tours available.</p>;
+    return <div className="min-h-screen">No assigned tours available.</div>;
   }
 
   return (
-    <div className="overflow-x-auto p-4">
+    <div className="overflow-x-auto min-h-screen p-4">
       <table className="table-auto w-full border-collapse border border-gray-300">
         <thead>
           <tr>
